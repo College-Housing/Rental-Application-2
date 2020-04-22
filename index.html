@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Step Bootstrap Form with animations</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome link -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/v4-shims.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!--PEN HEADER-->
+<header class="header">
+  <a class="navbar-brand" href="#">
+    <img src="images/logo-2.png" width="70%" alt="">
+  </a>
+</header>
+<!--PEN CONTENT     -->
+<div class="content">
+  <!--content inner-->
+  <div class="content__inner">
+    <div class="row">
+      <div class="col-12 col-lg-8 m-auto">
+        <!--content title-->
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
+        <!--content title-->
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
+
+      </div>
+
+    </div>
+    <!-- <div class="container row" > -->
+      <!--content title-->
+      <!-- <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2> -->
+      <!--content title-->
+      <!-- <h2 class="col-12 ml-auto mr-auto mb-4 content__title">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2> -->
+    <!-- </div> -->
+    <div class="container overflow-hidden">
+      <!--multisteps-form-->
+      <div class="multisteps-form">
+        <!--progress bar-->
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress setup-panel">
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
+
+            </div>
+          </div>
+        </div>
+        <!--form panels-->
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            <form id="myForm" role="form" class="multisteps-form__form" data-toggle="validator">
+              <!--single form panel (1)-->
+              <div id="step-1" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Applicant Information</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required data-error="Please fill out this field." name="applicant-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                      <div class="help-block with-errors"></div>
+
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="applicant-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0  form-group">
+                      <input required name="applicant-birthdate" type="date" class="multisteps-form__input form-control" placeholder="Birth Date">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="applicant-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <select required class="multisteps-form__select form-control">
+                        <option selected="selected">State...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                      <input required class="multisteps-form__input form-control" type="text" placeholder="City"/>
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                      <input required name="applicant-street" type="text" class="form-control textarea-form" placeholder="Street">
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                      <input required class="multisteps-form__input form-control" type="text" placeholder="Zip"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="applicant-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="applicant-ssn" type="text" class="multisteps-form__input form-control" placeholder="Enter SSN">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Member Name">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <textarea required name="group-members" type="text" class="form-control textarea-form" placeholder="Group Members Names"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <input required name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay (without utilities)">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <select required name="plan-on-car?" type="text" class="multisteps-form__input form-control">
+                        <option value="Are you planning on having a car?" disabled selected hidden>Are you planning on having a car?</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="car-make" type="text" class="multisteps-form__input form-control" placeholder="Car Make">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="car-model" type="text" class="multisteps-form__input form-control" placeholder="Car Model">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="license-plate-num" type="text" class="multisteps-form__input form-control" placeholder="Car License Plate Number">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="driver-license-num" type="text" class="multisteps-form__input form-control" placeholder="Drivers License Number">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="applicant-school" type="text" class="multisteps-form__input form-control" placeholder="School">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="applicant-major" type="text" class="multisteps-form__input form-control" placeholder="Major">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6 form-group">
+                      <input required name="applicant-school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0 form-group">
+                      <input required name="applicant-gpa" type="text" class="multisteps-form__input form-control" placeholder="GPA">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <input required name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <select required name="payment-schedule" type="text" class="multisteps-form__input form-control">
+                        <option value="Preferred Payment Schedule" disabled selected hidden>Preferred Payment Schedule</option>
+                        <option value="Quarterly">Quarterly</option>
+                        <option value="Biannual">Biannual</option>
+                        <option value="Yearly">Yearly</option>
+                        <option value="Monthly">Monthly</option>
+                        <option value="Bimonthly">Bimonthly</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <select required name="who-pay-rent" type="text" class="multisteps-form__input form-control">
+                        <option value="Who is paying the rent?" disabled selected hidden>Who is paying the rent?</option>
+                        <option value="Self">Self</option>
+                        <option value="Parents">Parents</option>
+                        <option value="Scholarships">Scholarships</option>
+                        <option value="Others">Others</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <p class="radio-button-txt">It is so important that you register to vote in Collage Park (it will make a difference for YOU and future Terps). Pass this on to everyone you know - this CAN really make a difference for YOU living in College Park. Are you willing to register to vote?</p>
+                      <div class="radio-btn-row form-group">
+                        <label class="radio-inline">
+                          <input required type="radio" name="willing-to-register-to-vote">Yes
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="willing-to-register-to-vote">No
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col form-group">
+                      <textarea required name="property-address" type="text" class="form-control textarea-form" placeholder="Property address that you're intersted In?"></textarea>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button id="next-1" class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next" >Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (2)-->
+              <div id="step-2" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Guarantors</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <p class="radio-button-txt">Both parents are required to sign the guaranty. Is there any problems with that?</p>
+                      <div class="radio-btn-row">
+                        <label class="radio-inline">
+                          <input required type="radio" name="problem-with-both-parents-signing">Yes
+                        </label>
+                        <label class="radio-inline">
+                          <input required type="radio" name="problem-with-both-parents-signing">No
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <p class="radio-button-txt">If yes, please note reason, If no, please enter N/A:</p>
+                      <input required id="note-reason" type="text" class="multisteps-form__input form-control" placeholder="Passed away/have no contact/financially independent/other.">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <h5 class="card-title">Parent 1 Information</h5>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input required name="parent-1-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input required name="parent-1-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-1-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <select name="parent-1-state" class="multisteps-form__select form-control">
+                        <option selected="selected">State...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-1-street" type="text" class="form-control textarea-form" placeholder="Street">
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-1-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input required name="parent-1-email" type="text" class="multisteps-form__input form-control" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-1-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input required name="parent-1-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <h5 class="card-title">Parent 2 Information</h5>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input required name="parent-2-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input required name="parent-2-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-2-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <select name="parent-2-state" class="multisteps-form__select form-control">
+                        <option selected="selected">State...</option>
+                        <option>...</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-2-street" type="text" class="form-control textarea-form" placeholder="Street">
+                    </div>
+                    <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                      <input required name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-2-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input required name="parent-2-email" type="text" class="multisteps-form__input form-control" placeholder="Email Address">
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input required name="parent-2-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input required name="parent-2-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (3)-->
+              <div id="step-3" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div id="readroot">
+                      <h3 class="multisteps-form__title">Rental History</h3>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Rental Address:</h5>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6">
+                              <input required name="rental-history-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <select name="rental-history-state" class="multisteps-form__select form-control">
+                                <option selected="selected">State...</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="rental-history-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                            </div>
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="rental-history-street"  type="text" class="form-control textarea-form" placeholder="Street">
+                            </div>
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="rental-history-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input required name="rental-history-date" type="text" class="multisteps-form__input form-control" placeholder="Rental Dates">
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input required name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control" placeholder="Monthly Rent">
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <input required name="reason-for-leaving" type="text" class="multisteps-form__input form-control" placeholder="Reason For leaving">
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Landlord Information:</h5>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6">
+                              <input required name="landlord-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <input required name="landlord-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input required name="landlord-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input required name="landlord-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                        </div>
+                      </div>
+                      <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a>
+                    </div>
+                    <!-- end readroot -->
+                    <span id="writeroot"></span>
+                    <a class="add-rental-history"  onclick="addEntry1();">+ Add Rental History Entry</a>
+                  </div>
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (4)-->
+              <div id="step-4" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div id="readroot2">
+                      <h3 class="multisteps-form__title">Employment</h3>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Employer Information:</h5>
+                          <div class="form-row mt-4">
+                            <div class="col">
+                              <input required name="employer-name" type="text" class="multisteps-form__input form-control" placeholder="Name">
+                            </div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6">
+                              <input required name="employer-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <input required name="employer-email" type="text" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Employer Address (optional):</h5>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6">
+                              <input required name="employer-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <select name="employer-state" class="multisteps-form__select form-control">
+                                <option selected="selected">State...</option>
+                                <option>...</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="employer-city"type="text" class="multisteps-form__input form-control" placeholder="City">
+                            </div>
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="employer-street"  type="text" class="form-control textarea-form" placeholder="Street">
+                            </div>
+                            <div class="col-6 col-sm-4 mt-4 mt-sm-0">
+                              <input required name="employer-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                            </div>
+                          </div>
+                          <br>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col-12 col-sm-6">
+                          <input required name="position-held" type="text" class="multisteps-form__input form-control" placeholder="Your Position">
+                        </div>
+                        <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                          <input required name="monthly-gross-salary" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Employment Dates:</h5>
+                          <div class="form-row mt-4 date-from-to-row">
+                            <div class="col-5 col-sm-5 mt-4 mt-sm-0">
+                              <input required name="employment-date-from" type="date" class="multisteps-form__input form-control" >
+                            </div>
+                            <div class="col-2 col-sm-2 mt-4 mt-sm-0 arrow-container" style="width:10%;">
+                                <!-- <i class="zmdi zmdi-calendar-alt"></i> -->
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="col-5 col-sm-5 mt-4 mt-sm-0">
+                              <input required name="employment-date-to" type="date" class="multisteps-form__input form-control">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row mt-4">
+                        <div class="col">
+                          <h5 class="card-title">Supervisor Name:</h5>
+                          <div class="form-row mt-4">
+                            <div class="col-12 col-sm-6">
+                              <input required name="supervisor-first-name" type="text" class="multisteps-form__input form-control" placeholder="First">
+                            </div>
+                            <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                              <input required name="supervisor-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last">
+                            </div>
+                          </div>
+                          <div class="form-row mt-4">
+                            <div class="col">
+                              <input required name="supervisor-title" type="text" class="multisteps-form__input form-control" placeholder="Supervisor Title">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Employment Entry</a>
+                    </div>
+                    <!-- end readroot -->
+                    <span id="writeroot2"></span>
+                    <a class="add-rental-history"  onclick="addEntry2();">+ Add Employment Entry</a>
+                  </div>
+                  <div class="row">
+                    <div class="button-row d-flex mt-4 col-12">
+                      <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (5)-->
+              <div id="step-5" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Terms and Conditions</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <p>I understand that this is a routine application to establish credit, character, employment, and rental history. I also understand that this is NOT an agreement to rent and that all applications must be approved. I authorize verification of references given. I declare that the statements above are true and correct, and I agree that the landlord may terminate my agreement entered into in reliance on any misstatement made above.</p>
+                  </div>
+                  <div class="form-row mt-1">
+                    <div class="form-holder w-100">
+                      <input required name="terms-and-conditions-agreement" type="checkbox" id="agreement" name="agree" value="I Agree" style="color: black;">
+                      <label for="agree">I agree to the terms and conditions</label><br>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="form-holder w-100">
+                      <label>Agreed By:</label>
+                      <input required name="applicant-full-name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-success ml-auto" type="button" title="Send">Send</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+  <script  src="js/script.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js\steps.js"></script>
+  <script src="js\btnManager.js"></script>
+
+  <script src="js/validator.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+
+
+
+
+</body>
+</html>
