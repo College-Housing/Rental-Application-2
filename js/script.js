@@ -1,3 +1,24 @@
+$("#myForm").validator().on("submit", function(event) {
+  if (event.isDefaultPrevented()) {
+        // handle the invalid form...
+        // cformError();
+        // csubmitMSG(false, "Please fill all fields!");
+        console.log("error");
+    } else {
+        // everything looks good!
+        event.preventDefault();
+        csubmitForm();
+        console.log("Success");
+    }
+});
+function csubmitForm() {
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxcBdPBu-sKht-W_qPSSk9hnX7_o8hL0piBsIDz-hF9W_iBWg/exec'
+  const form = document.forms['rental-app-form']
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+}
+
 //DOM elements
 const DOMstrings = {
   stepsBtnClass: 'multisteps-form__progress-btn',
@@ -9,6 +30,11 @@ const DOMstrings = {
   stepFormPanels: document.querySelectorAll('.multisteps-form__panel'),
   stepPrevBtnClass: 'js-btn-prev',
   stepNextBtnClass: 'js-btn-next' };
+
+  const getCurrentPanel = () => {
+    var currentPanel = $(".js-active");
+    return currentPanel;
+  };
 
 function toggleHasError() {
   var curStep = getActivePanel(),
@@ -30,12 +56,13 @@ function toggleHasError() {
 }
 function checkRequired() {
   let allAreFilled = true;
-  document.getElementById("step-1").querySelectorAll("[required]").forEach(function(i) {
+  var activePanel= getActivePanel();
+  activePanel.querySelectorAll("[required]").forEach(function(i) {
     if (!allAreFilled) return;
     if (!i.value) allAreFilled = false;
     if (i.type === "radio") {
       let radioValueCheck = false;
-      document.getElementById("step-1").querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
+      activePanel.querySelectorAll(`[name=${i.name}]`).forEach(function(r) {
         if (r.checked) radioValueCheck = true;
       })
       allAreFilled = radioValueCheck;
@@ -46,6 +73,7 @@ function checkRequired() {
     return false;
   }
 }
+
 //remove class from a set of items
 const removeClasses = (elemSet, className) => {
 
@@ -109,6 +137,12 @@ const getActivePanel = () => {
   return activePanel;
 
 };
+
+// const getCurrentPanel = () => {
+//   var currentPanel = $(".js-active");
+//   return currentPanel;
+// };
+
 
 //open active panel (and close unactive panels)
 const setActivePanel = activePanelNum => {
@@ -176,6 +210,7 @@ DOMstrings.stepsForm.addEventListener('click', e => {
   }
 
 
+
   //find active panel
   const activePanel = findParent(eventTarget, `${DOMstrings.stepFormPanelClass}`);
 
@@ -188,18 +223,24 @@ DOMstrings.stepsForm.addEventListener('click', e => {
     window.scroll(0, 265);
 
   } else {
-    // checkRequired();
-    // console.log("Click Next");
-    // if(($("div").hasClass("has-error"))==true || checkRequired()== false){
-    //   // $(".nextBtn").prop('disabled',false)
-    //
-    //   console.log("Check invalid fields");
-    // }
-    // else {
+    checkRequired();
+    console.log("Click Next");
+    if(($("div").hasClass("has-error"))==true || checkRequired()== false){
+
+      $(".nextBtn").prop('disabled',false)
+      console.log("Check invalid fields");
+      var currentPanel =getCurrentPanel();
+      currentPanel.validator('validate');
+      // activePanel.validator('validate');
+
+      // .validator('validate');
+    }
+    else {
       console.log("Click next");
       activePanelNum++;
       window.scroll(0, 265);
-    // }
+
+    }
 
 
   }
@@ -223,17 +264,33 @@ const setAnimationType = newType => {
   });
 };
 
-//selector onchange - changing animation
-const animationSelect = document.querySelector('.pick-animation__select');
+toggleFields();
 
-animationSelect.addEventListener('change', () => {
-  const newAnimationType = animationSelect.value;
-
-  setAnimationType(newAnimationType);
+ $("#car-select").change(function () {
+    toggleFields();
 });
 
+function toggleFields() {
+    if ($("#car-select").val() === "Yes"){
+      $(".car-div").slideDown();
+      $(".car-field").attr("required",true);
+    }
 
+    else{
+      $(".car-div").slideUp();
+      $(".car-field").attr("required",false);
+    }
+}
 
+$('#yesCheck').click(function() {
+    $('#ifYesCheck').slideDown();
+    $("#note-reason").attr("required",true);
+
+});
+$('#noCheck').click(function() {
+    $('#ifYesCheck').slideUp();
+    $("#note-reason").attr("required",false);
+});
 
 ////My Scripts/////
 function addEntry2(){

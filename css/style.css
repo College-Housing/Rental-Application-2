@@ -236,3 +236,8 @@ body a {
   font-size: 12px;
   margin-left: 0.2rem;
 }
+
+.car{
+  visibility: hidden;
+  display: none;
+}
