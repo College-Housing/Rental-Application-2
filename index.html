@@ -48,11 +48,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled >Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled >Guarantors</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information"  disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors"  disabled>Guarantors</button>
               <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
               <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
               <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
 
             </div>
           </div>
@@ -69,33 +70,33 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter your First Name." name="applicant-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                      <input required data-error="Please enter your First Name." name="Applicant first name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
                       <div class="help-block with-errors"></div>
 
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter your Last Name." name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                      <input required data-error="Please enter your Last Name." name="Applicant last name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
                       <div class="help-block with-errors"></div>
 
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter a valid Email address." name="applicant-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                      <input required data-error="Please enter a valid Email address." name="Applicant Email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0  form-group">
-                      <input required data-error="Please enter your Birthdate." name="applicant-birthdate" type="date" class="multisteps-form__input form-control" placeholder="Birth Date">
+                      <input required data-error="Please enter your Birthdate." name="Applicant Birthdate" type="date" class="multisteps-form__input form-control" placeholder="Birth Date">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter your Country." name="applicant-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                      <input required data-error="Please enter your Country." name="Applicant Country" type="text" class="multisteps-form__input form-control" placeholder="Country">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <select name="applicant-state" required data-error="Please select a state" class="multisteps-form__select form-control">
+                      <select name="Applicant State" placeholder="Applicant State" required data-error="Please select a state" class="multisteps-form__select form-control">
                         <option value="" disabled selected hidden>State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -154,53 +155,53 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input name="applicant-city" required data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
+                      <input name="Applicant city" required data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter your City." name="applicant-street" type="text" class="form-control textarea-form" placeholder="Street">
+                      <input required data-error="Please enter your City." name="Applicant Street" type="text" class="form-control textarea-form" placeholder="Street">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input name="applicant-zip" required data-error="Please enter your Zip." class="multisteps-form__input form-control" type="text" placeholder="Zip"/>
+                      <input name="Applicant ZIP" required data-error="Please enter your Zip." class="multisteps-form__input form-control" type="text" placeholder="Zip"/>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter your Phone number." name="applicant-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                      <input required data-error="Please enter your Phone number." name="Applicant Phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter your SSN." name="applicant-ssn" type="text" class="multisteps-form__input form-control" placeholder="Enter SSN">
+                      <input required data-error="Please enter your SSN." name="Applicant SSN" type="text" class="multisteps-form__input form-control" placeholder="Enter SSN">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Member Name">
+                      <input required data-error="Please your group Lead name." name="Group Lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Member Name">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter the requested property for rent." name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
+                      <input required data-error="Please enter the requested property for rent." name="Requested Property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <textarea required data-error="Please enter all the group members names" name="group-members" type="text" class="form-control textarea-form" placeholder="Group Members Names"></textarea>
+                      <textarea required data-error="Please enter all the group members names" name="Group Members" type="text" class="form-control textarea-form" placeholder="Group Members Names"></textarea>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <input required data-error="Please fill out this field." name="estimated-payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay (without utilities)">
+                      <input required data-error="Please fill out this field." name="Estimated Payment" type="number" class="multisteps-form__input form-control" placeholder="Estimated amount you are prepared to pay (without utilities)">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <select id="car-select" required data-error="Please select an answer" name="plan-on-car?" type="text" class="multisteps-form__input form-control">
+                      <select id="car-select" placeholder="Do you own a Car?" required data-error="Please select an answer" name="Do you own a Car?" type="text" class="multisteps-form__input form-control">
                         <option value="">Do you own a car?</option>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
@@ -211,53 +212,53 @@
                   </div>
                   <div class="form-row mt-4 car-div" style="display: none;">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input data-error="Please fill out this field." name="car-make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
+                      <input data-error="Please fill out this field." name="Car Make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input data-error="Please fill out this field." name="car-model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
+                      <input data-error="Please fill out this field." name="Car Model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4 car-div" style="display: none;">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input data-error="Please fill out this field." name="license-plate-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
+                      <input data-error="Please fill out this field." name="License Plate No." type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input data-error="Please fill out this field." name="driver-license-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
+                      <input data-error="Please fill out this field." name="Driver License No." type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please fill out this field." name="applicant-school" type="text" class="multisteps-form__input form-control" placeholder="School">
+                      <input required data-error="Please fill out this field." name="Applicant school" type="text" class="multisteps-form__input form-control" placeholder="School">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please fill out this field." name="applicant-major" type="text" class="multisteps-form__input form-control" placeholder="Major">
+                      <input required data-error="Please fill out this field." name="Applicant major" type="text" class="multisteps-form__input form-control" placeholder="Major">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please fill out this field." name="applicant-school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
+                      <input required data-error="Please fill out this field." name="Applicant school-year" type="text" class="multisteps-form__input form-control" placeholder="Year">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please fill out this field." name="applicant-gpa" type="text" class="multisteps-form__input form-control" placeholder="GPA">
+                      <input required data-error="Please fill out this field." name="Applicant GPA" type="text" class="multisteps-form__input form-control" placeholder="GPA">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <input required data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                      <input required data-error="Please fill out this field." name="Local Affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <select required name="payment-schedule" data-error="Please select an answer" type="text" class="multisteps-form__input form-control">
+                      <select required name="Preferred payment schedule" data-error="Please select an answer" placeholder="Preferred Payment Schedule" type="text" class="multisteps-form__input form-control">
                         <option value="" disabled selected hidden>Preferred Payment Schedule</option>
                         <option value="Quarterly">Quarterly</option>
                         <option value="Biannual">Biannual</option>
@@ -270,7 +271,7 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col form-group">
-                      <select required name="who-pay-rent" data-error="Please select an answer" type="text" class="multisteps-form__input form-control">
+                      <select required name="Who is paying the rent?" placeholder="Who is paying the rent?" data-error="Please select an answer" type="text" class="multisteps-form__input form-control">
                         <option value="" disabled selected hidden>Who is paying the rent?</option>
                         <option value="Self">Self</option>
                         <option value="Parents">Parents</option>
@@ -285,10 +286,10 @@
                       <p class="radio-button-txt">It is so important that you register to vote in Collage Park (it will make a difference for YOU and future Terps). Pass this on to everyone you know - this CAN really make a difference for YOU living in College Park. Are you willing to register to vote?</p>
                       <div class="radio-btn-row form-group">
                         <label class="radio-inline">
-                          <input required data-error="Please choose an answer." type="radio" name="willing-to-register-to-vote">Yes
+                          <input required data-error="Please choose an answer." placeholder="Are you willing to register to vote?" type="radio" name="willing-to-register-to-vote" value="Yes">Yes
                         </label>
                         <label class="radio-inline">
-                          <input type="radio" name="willing-to-register-to-vote">No
+                          <input placeholder="Are you willing to register to vote?" type="radio" name="willing-to-register-to-vote" value="No">No
                         </label>
                         <div class="help-block with-errors"></div>
                       </div>
@@ -315,19 +316,20 @@
                       <p class="radio-button-txt">Both parents are required to sign the guaranty. Is there any problems with that?</p>
                       <div class="radio-btn-row form-group">
                         <label class="radio-inline">
-                          <input id="yesCheck" required data-error="Please choose an answer." type="radio" name="problem-with-both-parents-signing">Yes
+                          <input id="yesCheck" placeholder="Do you have a problem with both parents signing?" value="Yes" required data-error="Please choose an answer." type="radio" name="problem-with-both-parents-signing">Yes
                         </label>
                         <label class="radio-inline">
-                          <input id="noCheck" type="radio" name="problem-with-both-parents-signing">No
+                          <input id="noCheck" placeholder="Do you have a problem with both parents signing?" value="No" type="radio" name="problem-with-both-parents-signing">No
                         </label>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                   </div>
+
                   <div id="ifYesCheck" class="form-row mt-4" style="display:none;">
                     <div class="col form-group">
-                      <p class="radio-button-txt">If yes, please note reason:</p>
-                      <input data-error="Please note the reason." id="note-reason" type="text" class="multisteps-form__input form-control" placeholder="Passed away/have no contact/financially independent/other.">
+                      <p class="radio-button-txt">If yes, please note reason:(Passed away/have no contact/financially independent/other.)</p>
+                      <input data-error="Please note the reason." id="note-reason" type="text" class="multisteps-form__input form-control" placeholder="Reason for choosing No">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -348,11 +350,11 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Country." name="parent-1-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                      <input required data-error="Please enter Country." name="parent-1-country" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Country">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <select required data-error="Please choose state." name="parent-1-state" class="multisteps-form__select form-control">
+                      <select required data-error="Please choose state." placeholder="Parent 1 State" name="parent-1-state" class="multisteps-form__select form-control">
                         <option value="" disabled selected hidden>State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -411,35 +413,35 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                      <input required data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 City">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter Street." name="parent-1-street" type="text" class="form-control textarea-form" placeholder="Street">
+                      <input required data-error="Please enter Street." name="parent-1-street" type="text" class="form-control textarea-form" placeholder="Parent 1 Street">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter Zip." name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                      <input required data-error="Please enter Zip." name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Zip">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Phone number." name="parent-1-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                      <input required data-error="Please enter Phone number." name="parent-1-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Phone Number">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter a valid Email address." name="parent-1-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                      <input required data-error="Please enter a valid Email address." name="parent-1-email" type="email" class="multisteps-form__input form-control" placeholder="Parent 1 Email Address">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Place of employment." name="parent-1-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                      <input required data-error="Please enter Place of employment." name="parent-1-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Place of Employment">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter Position." name="parent-1-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                      <input required data-error="Please enter Position." name="parent-1-position" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Position">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -448,11 +450,11 @@
                       <h5 class="card-title">Parent 2 Information</h5>
                       <div class="form-row mt-4">
                         <div class="col-lg-6 col-sm-12 form-group">
-                          <input required data-error="Please enter First name." name="parent-2-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                          <input required data-error="Please enter First name." name="parent-2-first-name" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 First Name">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                          <input required data-error="Please enter Last name" name="parent-2-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                          <input required data-error="Please enter Last name" name="parent-2-last-name" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Last Name">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
@@ -460,11 +462,11 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Country." name="parent-2-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                      <input required data-error="Please enter Country." name="parent-2-country" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Country">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <select required data-error="Please choose a State." name="parent-2-state" class="multisteps-form__select form-control">
+                      <select required data-error="Please choose a State." placeholder="Parent 2 State" name="parent-2-state" class="multisteps-form__select form-control">
                         <option value="" disabled selected hidden>State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -523,35 +525,35 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                      <input required data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 City">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter street." name="parent-2-street" type="text" class="form-control textarea-form" placeholder="Street">
+                      <input required data-error="Please enter street." name="parent-2-street" type="text" class="form-control textarea-form" placeholder="Parent 2 Street">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter Zip." name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                      <input required data-error="Please enter Zip." name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Zip">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Phone number." name="parent-2-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                      <input required data-error="Please enter Phone number." name="parent-2-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Phone Number">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter a valid Email address." name="parent-2-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                      <input required data-error="Please enter a valid Email address." name="parent-2-email" type="email" class="multisteps-form__input form-control" placeholder="Parent 2 Email Address">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter Place of employment." name="parent-2-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
+                      <input required data-error="Please enter Place of employment." name="parent-2-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Place of Employment">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter Position." name="parent-2-position" type="text" class="multisteps-form__input form-control" placeholder="Position">
+                      <input required data-error="Please enter Position." name="parent-2-position" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Position">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -572,11 +574,11 @@
                           <h5 class="card-title">Rental Address:</h5>
                           <div class="form-row mt-4">
                             <div class="col-lg-6 col-sm-12 form-group">
-                              <input required data-error="Please enter Country." name="rental-history-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                              <input required data-error="Please enter Country."  placeholder="Rental Country" name="rental-history-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                              <select required data-error="Please choose an answer." name="rental-history-state" class="multisteps-form__select form-control">
+                              <select required data-error="Please choose an answer." placeholder="Rental State" name="rental-history-state" class="multisteps-form__select form-control">
                                 <option value="" disabled selected hidden>State</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
@@ -635,15 +637,15 @@
                           </div>
                           <div class="form-row mt-4">
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter City" name="rental-history-city" type="text" class="multisteps-form__input form-control" placeholder="City">
+                              <input required data-error="Please enter City"  placeholder="Rental City" name="rental-history-city" type="text" class="multisteps-form__input form-control">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter Street." name="rental-history-street"  type="text" class="form-control textarea-form" placeholder="Street">
+                              <input required data-error="Please enter Street."  placeholder="Rental Street" name="rental-history-street"  type="text" class="form-control textarea-form">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter Zip." name="rental-history-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                              <input required data-error="Please enter Zip." placeholder="Rental Zip" name="rental-history-zip" type="text" class="multisteps-form__input form-control">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -655,7 +657,7 @@
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                          <input required data-error="Please enter Monthly Rent." name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control" placeholder="Monthly Rent">
+                          <input required data-error="Please enter Monthly Rent."  placeholder="Monthly Rent" name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control" placeholder="Monthly Rent">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
@@ -670,11 +672,11 @@
                           <h5 class="card-title">Landlord Information:</h5>
                           <div class="form-row mt-4">
                             <div class="col-lg-6 col-sm-12 form-group">
-                              <input required data-error="Please enter First Name." name="landlord-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                              <input required data-error="Please enter First Name." name="landlord-first-name" type="text" class="multisteps-form__input form-control" placeholder="Landlord First Name">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter Last Name." name="landlord-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                              <input required data-error="Please enter Last Name." name="landlord-last-name" type="text" class="multisteps-form__input form-control" placeholder="Landlord Last Name">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -682,11 +684,11 @@
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-lg-6 col-sm-12 form-group">
-                          <input required data-error="Please enter Phone number." name="landlord-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                          <input required data-error="Please enter Phone number." name="landlord-phone" type="text" class="multisteps-form__input form-control" placeholder="Landlord Phone Number">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                          <input required data-error="Please enter Email address." name="landlord-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                          <input required data-error="Please enter Email address." name="landlord-email" type="email" class="multisteps-form__input form-control" placeholder="Landlord Email address">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
@@ -715,17 +717,17 @@
                           <h5 class="card-title">Employer Information:</h5>
                           <div class="form-row mt-4">
                             <div class="col form-group">
-                              <input required data-error="Please enter Name." name="employer-name" type="text" class="multisteps-form__input form-control" placeholder="Name">
+                              <input required data-error="Please enter Name." name="employer-name" type="text" class="multisteps-form__input form-control" placeholder="Employer Name">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
                           <div class="form-row mt-4">
                             <div class="col-lg-6 col-sm-12 form-group">
-                              <input required data-error="Please enter Phone number." name="employer-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                              <input required data-error="Please enter Phone number." name="employer-phone" type="text" class="multisteps-form__input form-control" placeholder="Employer Phone number">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                              <input name="employer-email" type="text" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                              <input name="employer-email" type="text" class="multisteps-form__input form-control" placeholder="Employer Email Address(optional)">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -736,11 +738,11 @@
                           <h5 class="card-title">Employer Address (optional):</h5>
                           <div class="form-row mt-4">
                             <div class="col-lg-6 col-sm-12 form-group">
-                              <input name="employer-country" type="text" class="multisteps-form__input form-control" placeholder="Country">
+                              <input name="employer-country" type="text" class="multisteps-form__input form-control" placeholder="Employer Country">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                              <select name="employer-state" class="multisteps-form__select form-control">
+                              <select name="employer-state" placeholder="Employer State" class="multisteps-form__select form-control">
                                 <option value="" disabled selected hidden>State</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
@@ -799,15 +801,15 @@
                           </div>
                           <div class="form-row mt-4">
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input name="employer-city"type="text" class="multisteps-form__input form-control" placeholder="City">
+                              <input name="employer-city"type="text" class="multisteps-form__input form-control" placeholder="Employer City">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input name="employer-street"  type="text" class="form-control textarea-form" placeholder="Street">
+                              <input name="employer-street"  type="text" class="form-control textarea-form" placeholder="Employer Street">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                              <input name="employer-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip">
+                              <input name="employer-zip" type="text" class="multisteps-form__input form-control" placeholder="Employer Zip">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -829,7 +831,7 @@
                           <h5 class="card-title">Employment Dates:</h5>
                           <div class="form-row mt-4 date-from-to-row">
                             <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter a date." name="employment-date-from" type="date" class="multisteps-form__input form-control" >
+                              <input required data-error="Please enter a date." name="employment-date-from" type="date" class="multisteps-form__input form-control" placeholder="Started Employment at:">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-2 col-sm-2 mt-4 mt-sm-0 arrow-container" style="width:10%;">
@@ -837,7 +839,7 @@
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                             <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter a date" name="employment-date-to" type="date" class="multisteps-form__input form-control">
+                              <input required data-error="Please enter a date" name="employment-date-to" type="date" class="multisteps-form__input form-control" placeholder="Ended Employment at:">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -848,11 +850,11 @@
                           <h5 class="card-title">Supervisor Name:</h5>
                           <div class="form-row mt-4">
                             <div class="col-lg-6 col-sm-12 form-group">
-                              <input required data-error="Please enter First name." name="supervisor-first-name" type="text" class="multisteps-form__input form-control" placeholder="First">
+                              <input required data-error="Please enter First name." name="supervisor-first-name" type="text" class="multisteps-form__input form-control" placeholder="Supervisor First name">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter Last name." name="supervisor-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last">
+                              <input required data-error="Please enter Last name." name="supervisor-last-name" type="text" class="multisteps-form__input form-control" placeholder="Supervisosr Last name">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
@@ -895,16 +897,42 @@
                   <div class="form-row mt-4">
                     <div class="form-holder w-100 form-group">
                       <label>Agreed By:</label>
-                      <input required data-error="Please enter your Full Name." name="applicant-full-name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
+                      <input required data-error="Please enter your Full Name." name="Applicant Full name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="button-row d-flex mt-4">
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button id="previewBtn" class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next" >Preview Submission</button>
+
+                    <!-- <button class="btn btn-primary js-btn-preview js-btn-next nextBtn ml-auto" id="previewBtn" type="button" title="Preview" >Preview Submission</button> -->
+                    <!-- <button type="button"  class="button-1  btn btn-primary btn-lg ml-auto" data-toggle="modal" data-target="#myModal">Join TERPX</button> </a> -->
+
+                    <!-- <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button> -->
+                  </div>
+                </div>
+              </div>
+              <!--single form panel (6)-->
+              <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+                <h3 class="multisteps-form__title">Preview Submission</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <p>Are you sure you want to submit the following details?.</p>
+                  </div>
+                  <table id="prevTable" class="table table-bordered">
+
+                  </table>
+
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <!-- <button class="btn btn-primary js-btn-preview ml-auto" id="previewBtn" type="button" title="Preview" data-toggle="modal" data-target="#myModal">Preview Submission</button> -->
+                    <!-- <button type="button"  class="button-1  btn btn-primary btn-lg ml-auto" data-toggle="modal" data-target="#myModal">Join TERPX</button> </a> -->
+
                     <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button>
                   </div>
                 </div>
               </div>
+
             </form>
           </div>
         </div>
@@ -913,12 +941,17 @@
   </div>
 </div>
 <!-- partial -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+  <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script> -->
   <!-- <script src="js/validator.min.js"></script> -->
+  <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
   <script  src="js/script.js"></script>
   <script src="js\steps.js"></script>
+  <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  <script src="js\preview.js"></script>
+
+
   <!-- <script src="js\btnManager.js"></script> -->
 
 
