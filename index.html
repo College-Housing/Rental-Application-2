@@ -28,9 +28,9 @@
     <div class="row">
       <div class="col-sm-12 col-md-8 col-lg-6 m-auto">
         <!--content title-->
-        <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-lg content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
         <!--content title-->
-        <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title-sm ">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
 
       </div>
 
@@ -49,11 +49,11 @@
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
               <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
               <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
               <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
               <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled >Preview Submission</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
 
             </div>
           </div>
@@ -65,8 +65,8 @@
             <!-- <form id="myForm" role="form" class="multisteps-form__form"> -->
 
               <!--single form panel (1)-->
-              <div id="step-1" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="fadeIn">
-                <h3 class="multisteps-form__title">Applicant Information</h3>
+              <div id="step-1" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Applicant Information</h4>
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
@@ -345,7 +345,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <select id="state-1" name="Applicant State" placeholder="applicant-state" required data-error="Please select a state" class="multisteps-form__select form-control state">
+                      <select id="state-1" name="applicant-state" placeholder="Applicant State" required data-error="Please select a state" class="multisteps-form__select form-control state">
                         <option value="" disabled selected >State</option>
                         <option value="AL">Alabama</option>
                         <option value="AK">Alaska</option>
@@ -404,21 +404,21 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input name="applicant-city" required data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="City"/>
+                      <input name="applicant-city" required data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="Applicant City"/>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input required data-error="Please enter your street." name="applicant-street" type="text" class="form-control textarea-form" placeholder="Street">
+                      <input required data-error="Please enter your street." name="applicant-street" type="text" class="form-control textarea-form" placeholder="Applicant Street">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
-                      <input name="applicant-zip" required data-error="Please enter your Zip." class="multisteps-form__input form-control" type="text" placeholder="Zip"/>
+                      <input name="applicant-zip" required data-error="Please enter your Zip." class="multisteps-form__input form-control" type="text" placeholder="Applicant Zip"/>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input required data-error="Please enter your Phone number." name="applicant-phone" type="text" class="multisteps-form__input form-control" placeholder="Phone Number">
+                      <input required data-error="Please enter your Phone number." name="applicant-phone" type="text" class="multisteps-form__input form-control" placeholder="Applicant phone number">
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
@@ -561,8 +561,8 @@
                 </div>
               </div>
               <!--single form panel (2)-->
-              <div id="step-2" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Guarantors</h3>
+              <div id="step-2" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Guarantors</h4>
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col">
@@ -591,11 +591,11 @@
                       <h5 class="card-title">Parent 1 Information</h5>
                       <div class="form-row mt-4">
                         <div class="col-lg-6 col-sm-12 form-group">
-                          <input required data-error="Please enter first name." name="parent-1-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                          <input required data-error="Please enter first name." name="parent-1-first-name" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 first name">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                          <input required data-error="Please enter last name." name="parent-1-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                          <input required data-error="Please enter last name." name="parent-1-last-name" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 last name">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
@@ -1313,11 +1313,11 @@
                 </div>
               </div>
               <!--single form panel (3)-->
-              <div id="step-3" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+              <div id="step-3" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div id="readroot">
-                      <h3 class="multisteps-form__title">Rental History</h3>
+                      <h4 class="multisteps-form__title">Rental History</h4>
                       <div class="form-row mt-4">
                         <div class="col">
                           <h5 class="card-title">Rental Address:</h5>
@@ -1704,11 +1704,11 @@
                 </div>
               </div>
               <!--single form panel (4)-->
-              <div id="step-4" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
+              <div id="step-4" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div id="readroot2">
-                      <h3 class="multisteps-form__title">Employment</h3>
+                      <h4 class="multisteps-form__title">Employment</h4>
                       <div class="form-row mt-4">
                         <div class="col">
                           <h5 class="card-title">Employer Information:</h5>
@@ -2126,8 +2126,8 @@
                 </div>
               </div>
               <!--single form panel (5)-->
-              <div id="step-5" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Terms and Conditions</h3>
+              <div id="step-5" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Terms and Conditions</h4>
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <p>I understand that this is a routine application to establish credit, character, employment, and rental history. I also understand that this is NOT an agreement to rent and that all applications must be approved. I authorize verification of references given. I declare that the statements above are true and correct, and I agree that the landlord may terminate my agreement entered into in reliance on any misstatement made above.</p>
@@ -2158,8 +2158,8 @@
                 </div>
               </div>
               <!--single form panel (6)-->
-              <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="scaleIn">
-                <h3 class="multisteps-form__title">Preview Submission</h3>
+              <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h4 class="multisteps-form__title">Preview Submission</h4>
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <p>Are you sure you want to submit the following details?.</p>
@@ -2172,12 +2172,11 @@
                     <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
                     <!-- <button class="btn btn-primary js-btn-preview ml-auto" id="previewBtn" type="button" title="Preview" data-toggle="modal" data-target="#myModal">Preview Submission</button> -->
                     <!-- <button type="button"  class="button-1  btn btn-primary btn-lg ml-auto" data-toggle="modal" data-target="#myModal">Join TERPX</button> </a> -->
-
-                    <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button>
+                    <button class="btn btn-primary ml-auto" id="editBtn" type="button" title="Prev">Edit</button>
+                    <button class="btn btn-success ml-auto" type="submit" title="Send">Submit</button>
                   </div>
                 </div>
               </div>
-
             </form>
           </div>
         </div>

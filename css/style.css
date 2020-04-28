@@ -52,9 +52,15 @@ body a {
   margin: 0 auto 50px;
 }
 
-.content__title {
-  margin-bottom: 40px;
+.content__title-lg {
+  margin-bottom: 20px;
   font-size: 20px;
+  text-align: center;
+}
+
+.content__title-sm{
+  margin-bottom: 40px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -62,13 +68,22 @@ body a {
   margin-bottom: 10px;
 }
 
+.card-title{
+  font-size: 1.2rem;
+}
+.edit{
+  text-align: center;
+  cursor: pointer;
+}
+/* .edit:hover{} */
+
 .multisteps-form__progress {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 }
 
 .multisteps-form__progress-btn {
-  font-size: 1rem;
+  font-size: 0.7rem;
   transition-property: all;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -168,7 +183,7 @@ body a {
 }
 .multisteps-form__panel[data-animation="slideHorz"].js-active {
   transition-property: all;
-  transition-duration: 0.25s;
+  transition-duration: 0.35s;
   transition-timing-function: cubic-bezier(0.2, 1.13, 0.38, 1.43);
   transition-delay: 0s;
   left: 0;
@@ -178,14 +193,14 @@ body a {
 }
 .multisteps-form__panel[data-animation="slideVert"].js-active {
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
   transition-delay: 0s;
   top: 0;
 }
 .multisteps-form__panel[data-animation="fadeIn"].js-active {
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-timing-function: linear;
   transition-delay: 0s;
 }

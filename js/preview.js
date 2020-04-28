@@ -8,7 +8,15 @@ $('#previewBtn').click(function() {
        function(index){
          var input = $(this);
          if (!(input.val()==="")) {
-           $("#prevTable").append('<tr class="d-flex"><th class="col-4">'+input.attr('placeholder')+'</th><td class="col-8">'+input.val()+'</td></tr>');
+           $("#prevTable").append('<tr class="d-flex"><th class="col-5">'+input.attr('placeholder')+'</th><td class="col-7">'+input.val()+'</td></tr>');
+           // var editBtn= $('#'+input.attr('name'));
+           // console.log(editBtn);
+           // var editBtnID= input.attr('name');
+           // var originalField = $("form input[name='"+editBtnID+"']");
+           // var originalField2 = $("form select[name='"+editBtnID+"']");
+
+
+
          }
          else {
            return ;
@@ -17,6 +25,16 @@ $('#previewBtn').click(function() {
      );
 
 });
+
+$('#editBtn').click(function() {
+  $("#prevTable").empty();
+  setActiveStep(0);
+  setActivePanel(0);
+  window.scroll(0, 265);
+
+
+})
+
 
 function disableState(countryId, stateId) {
   var country = $(countryId);
