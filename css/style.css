@@ -91,7 +91,9 @@ body a {
   position: relative;
   padding-top: 20px;
   color: rgba(108, 117, 125, 0.7);
-  text-indent: -9999px;
+  /* text-indent: -9999px; */
+  text-indent: 0;
+
   border: none;
   background-color: transparent;
   outline: none !important;
