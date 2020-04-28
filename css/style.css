@@ -92,7 +92,7 @@ body a {
   padding-top: 20px;
   color: rgba(108, 117, 125, 0.7);
   /* text-indent: -9999px; */
-  text-indent: 0;
+  /* text-indent: 0; */
 
   border: none;
   background-color: transparent;
@@ -101,7 +101,7 @@ body a {
 }
 @media (max-width: 500px) {
   .multisteps-form__progress-btn {
-    text-indent: 0;
+    /* text-indent: 0; */
     font-size: 0.5rem;
   }
 }
