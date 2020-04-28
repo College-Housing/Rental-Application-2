@@ -68,6 +68,7 @@ body a {
 }
 
 .multisteps-form__progress-btn {
+  font-size: 1rem;
   transition-property: all;
   transition-duration: 0.15s;
   transition-timing-function: linear;

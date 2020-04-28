@@ -26,11 +26,11 @@
   <!--content inner-->
   <div class="content__inner">
     <div class="row">
-      <div class="col-12 col-lg-8 m-auto">
+      <div class="col-sm-12 col-md-8 col-lg-6 m-auto">
         <!--content title-->
         <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Welcome to our Community! We are excited to have you join us!</h2>
         <!--content title-->
-        <h2 class="col-12 ml-auto mr-auto mb-4 content__title">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
+        <h2 class="col-12 ml-auto mr-auto mb-4 content__title content__title--m-sm">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
 
       </div>
 
@@ -48,12 +48,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information"  >Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors"  >Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled >Preview Submission</button>
 
             </div>
           </div>
@@ -2142,7 +2142,7 @@
                   <div class="form-row mt-4">
                     <div class="form-holder w-100 form-group">
                       <label>Agreed By:</label>
-                      <input required data-error="Please enter your Full Name." name="Applicant Full name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
+                      <input required data-error="Please enter your Full Name." name="applicant-full-name" type="text" class="multisteps-form__input form-control" placeholder="Type Your Full Name">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
