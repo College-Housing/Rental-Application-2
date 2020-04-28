@@ -97,9 +97,10 @@ body a {
   outline: none !important;
   /* cursor: pointer; */
 }
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .multisteps-form__progress-btn {
     text-indent: 0;
+    font-size: 0.5rem;
   }
 }
 .multisteps-form__progress-btn:before {
