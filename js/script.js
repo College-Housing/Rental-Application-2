@@ -264,6 +264,27 @@ const setAnimationType = newType => {
   });
 };
 
+var carFields = '<div class="form-row mt-4 car-div">'+
+  '<div class="col-lg-6 col-sm-12 form-group">'+
+  '  <input data-error="Please fill out this field." name="Car Make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">'+
+  '  <div class="help-block with-errors"></div>'+
+  '</div>'+
+  '<div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">'+
+  '  <input data-error="Please fill out this field." name="Car Model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">'+
+  '  <div class="help-block with-errors"></div>'+
+'</div>'+
+  '</div>'+
+  '<div class="form-row mt-4 car-div">'+
+  '  <div class="col-lg-6 col-sm-12 form-group">'+
+  '    <input data-error="Please fill out this field." name="License Plate No." type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">'+
+  '    <div class="help-block with-errors"></div>'+
+  '  </div>'+
+  '  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">'+
+  '    <input data-error="Please fill out this field." name="Driver License No." type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">'+
+  '    <div class="help-block with-errors"></div>'+
+  '  </div>'+
+  '</div>';
+
 toggleFields();
 
  $("#car-select").change(function () {
@@ -271,16 +292,30 @@ toggleFields();
 });
 
 function toggleFields() {
-    if ($("#car-select").val() === "Yes"){
-      $(".car-div").slideDown();
-      $(".car-field").attr("required",true);
-    }
-
-    else{
+    const x = $(".car-div");
+    if (!($("#car-select").val() === "Yes")){
       $(".car-div").slideUp();
       $(".car-field").attr("required",false);
     }
+
+    else{
+
+      $(".car-div").slideDown();
+      $(".car-field").attr("required",true);
+    }
 }
+// function toggleFields(){
+//       if ($("#car-select").val() === "Yes"){
+//         car
+//         // $(".car-div").slideDown();
+//         // $(".car-field").attr("required",true);
+//       }
+//
+//       else{
+//         $(".car-div").slideUp();
+//         $(".car-field").attr("required",false);
+//       }
+// }
 
 $('#yesCheck').click(function() {
     $('#ifYesCheck').slideDown();
