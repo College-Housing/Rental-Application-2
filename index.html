@@ -48,12 +48,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" >Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
 
             </div>
           </div>
@@ -86,7 +86,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0  form-group">
-                      <input required data-error="Please enter your Birthdate." name="applicant-birthdate" type="date" class="multisteps-form__input form-control" placeholder="Applicant birthdate">
+                      <input required data-error="Please enter your Birthdate." name="applicant-birthdate" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Applicant birthdate">
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -403,15 +403,15 @@
                     </div>
                   </div>
                   <div class="form-row mt-4">
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input name="applicant-city" required data-error="Please enter your City." class="multisteps-form__input form-control" type="text" placeholder="Applicant City"/>
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter your street." name="applicant-street" type="text" class="form-control textarea-form" placeholder="Applicant Street">
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input name="applicant-zip" required data-error="Please enter your Zip." class="multisteps-form__input form-control" type="text" placeholder="Applicant Zip"/>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -913,15 +913,15 @@
                     </div>
                   </div>
                   <div class="form-row mt-4">
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter City." name="parent-1-city" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 City">
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter Street." name="parent-1-street" type="text" class="form-control textarea-form" placeholder="Parent 1 Street">
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter Zip." name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Parent 1 Zip">
                       <div class="help-block with-errors"></div>
                     </div>
@@ -1273,15 +1273,15 @@
                     </div>
                   </div>
                   <div class="form-row mt-4">
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter city." name="parent-2-city" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 City">
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter street." name="parent-2-street" type="text" class="form-control textarea-form" placeholder="Parent 2 Street">
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                    <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <input required data-error="Please enter Zip." name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Parent 2 Zip">
                       <div class="help-block with-errors"></div>
                     </div>
@@ -1633,15 +1633,15 @@
                             </div>
                           </div>
                           <div class="form-row mt-4">
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input required data-error="Please enter City"  placeholder="Rental City" name="rental-history-city" type="text" class="multisteps-form__input form-control">
                               <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input required data-error="Please enter Street."  placeholder="Rental Street" name="rental-history-street"  type="text" class="form-control textarea-form">
                               <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input required data-error="Please enter Zip." placeholder="Rental Zip" name="rental-history-zip" type="text" class="multisteps-form__input form-control">
                               <div class="help-block with-errors"></div>
                             </div>
@@ -1650,7 +1650,7 @@
                       </div>
                       <div class="form-row mt-4">
                         <div class="col-lg-6 col-sm-12 form-group">
-                          <input required data-error="Please enter Rental dates." name="rental-history-date" type="text" class="multisteps-form__input form-control" placeholder="Rental Dates">
+                          <input required data-error="Please enter Rental dates." name="rental-history-date" type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" class="multisteps-form__input form-control" placeholder="Rental Dates">
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
@@ -2045,15 +2045,15 @@
                             </div>
                           </div>
                           <div class="form-row mt-4">
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input name="employer-city"type="text" class="multisteps-form__input form-control" placeholder="Employer City">
                               <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input name="employer-street"  type="text" class="form-control textarea-form" placeholder="Employer Street">
                               <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-6 col-sm-4 mt-4 mt-sm-0 form-group">
+                            <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                               <input name="employer-zip" type="text" class="multisteps-form__input form-control" placeholder="Employer Zip">
                               <div class="help-block with-errors"></div>
                             </div>
@@ -2076,7 +2076,7 @@
                           <h5 class="card-title">Employment Dates:</h5>
                           <div class="form-row mt-4 date-from-to-row">
                             <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter a date." name="employment-date-from" type="date" class="multisteps-form__input form-control" placeholder="Started Employment at:">
+                              <input required data-error="Please enter a date." name="employment-date-from" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
                               <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-2 col-sm-2 mt-4 mt-sm-0 arrow-container" style="width:10%;">
@@ -2084,7 +2084,7 @@
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                             <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                              <input required data-error="Please enter a date" name="employment-date-to" type="date" class="multisteps-form__input form-control" placeholder="Ended Employment at:">
+                              <input required data-error="Please enter a date" name="employment-date-to" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
                               <div class="help-block with-errors"></div>
                             </div>
                           </div>
