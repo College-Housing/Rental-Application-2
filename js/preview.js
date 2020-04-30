@@ -885,6 +885,7 @@ function disableState() {
       if(!(country.val() === "United States")){
         console.log("not US");
         state.prop("disabled",true)
+        state.prop("required", false);
         state.parent().removeClass("has-error has-danger");
         state.next().hide();
         state.val('');
