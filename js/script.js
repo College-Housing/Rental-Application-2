@@ -328,9 +328,9 @@ $('#noCheck').click(function() {
 });
 
 ////My Scripts/////
-function addEntry2(){
-	$("#readroot2:last").clone().appendTo("#writeroot2");
-}
-function addEntry1(){
-	$("#readroot:last").clone().appendTo("#writeroot");
-}
+// function addEntry2(){
+// 	$("#readroot2:last").clone().appendTo("#writeroot2");
+// }
+// function addEntry1(){
+// 	$("#readroot:last").clone().appendTo("#writeroot");
+// }
