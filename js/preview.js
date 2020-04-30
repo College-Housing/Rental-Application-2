@@ -36,41 +36,44 @@ $('#editBtn').click(function() {
 })
 
 
-function disableState(countryId, stateId) {
-  var country = $(countryId);
-  var state = $(stateId);
-  country.change(function () {
-     // disableState("#country-1","#state-1");
-     if (!(country.val() === "United States")) {
-       // console.log("not US");
-       state.prop("disabled", true);
-       state.prop("required", false);
-       state.parent().removeClass("has-error has-danger");
-       state.next().hide();
-       state.val('');
+// function disableState(countryId, stateId) {
+//   var country = $(countryId);
+//   var state = $(stateId);
+//   country.change(function () {
+//      // disableState("#country-1","#state-1");
+//      if (!(country.val() === "United States")) {
+//        // console.log("not US");
+//        state.prop("disabled", true);
+//        state.prop("required", false);
+//        state.parent().removeClass("has-error has-danger");
+//        state.next().hide();
+//        state.val('');
+//
+//
+//      }
+//      else {
+//        // console.log("is US");
+//        state.prop("disabled", false);
+//        state.prop("required", true);
+//        // state.parent().addClass("has-error has-danger");
+//        state.next().show();
+//
+//        // state.parent().addClass("has-error has-danger");
+//
+//      }
+//   });
+//
+//   // return country, state;
+// }
+//
+// disableState("#country-1","#state-1");
+// disableState("#country-2","#state-2");
+// disableState("#country-3","#state-3");
+// disableState("#country-4","#state-4");
+// disableState("#country-5","#state-5");
 
+// var countryList= $(".country");
 
-     }
-     else {
-       // console.log("is US");
-       state.prop("disabled", false);
-       state.prop("required", true);
-       // state.parent().addClass("has-error has-danger");
-       state.next().show();
-
-       // state.parent().addClass("has-error has-danger");
-
-     }
-  });
-
-  // return country, state;
-}
-
-disableState("#country-1","#state-1");
-disableState("#country-2","#state-2");
-disableState("#country-3","#state-3");
-disableState("#country-4","#state-4");
-disableState("#country-5","#state-5");
 
 //  $("#country-1").change(function () {
 //     disableState("#country-1","#state-1");
@@ -84,7 +87,7 @@ var readrootText = `                            <div class="readrootContainer">
       <h5 class="card-title">Rental Address:</h5>
       <div class="form-row mt-4">
         <div class="col-lg-6 col-sm-12 form-group">
-          <select id="country-4" required data-error="Please enter Country."  placeholder="Rental Country" name="rental-history-country" type="text" class="multisteps-form__input form-control" >
+          <select required data-error="Please enter Country."  placeholder="Rental Country" name="rental-history-country" type="text" class="multisteps-form__input form-control country" >
             <option value="" disabled selected >Country</option>
             <option value="Afganistan">Afghanistan</option>
             <option value="Albania">Albania</option>
@@ -336,7 +339,7 @@ var readrootText = `                            <div class="readrootContainer">
           <div class="help-block with-errors"></div>
         </div>
         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-          <select id="state-4" required data-error="Please choose an answer." placeholder="Rental State" name="rental-history-state" class="multisteps-form__select form-control state">
+          <select required data-error="Please choose an answer." placeholder="Rental State" name="rental-history-state" class="multisteps-form__select form-control state">
             <option value="" disabled selected >State</option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
@@ -481,7 +484,7 @@ var readrootText_2 = `                      <div class="readrootContainer">
                             <h5 class="card-title">Employer Address (optional):</h5>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <select id="country-5" name="employer-country" type="text" class="multisteps-form__input form-control" placeholder="Employer Country">
+                                <select name="employer-country" type="text" class="multisteps-form__input form-control country" placeholder="Employer Country">
                                   <option value="" disabled selected >Country</option>
                                   <option value="Afganistan">Afghanistan</option>
                                   <option value="Albania">Albania</option>
@@ -733,7 +736,7 @@ var readrootText_2 = `                      <div class="readrootContainer">
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <select id="state-5" name="employer-state" placeholder="Employer State" class="multisteps-form__select form-control state">
+                                <select name="employer-state" placeholder="Employer State" class="multisteps-form__select form-control state">
                                   <option value="" disabled selected >State</option>
                                   <option value="AL">Alabama</option>
                                   <option value="AK">Alaska</option>
@@ -862,9 +865,42 @@ var readrootText_2 = `                      <div class="readrootContainer">
 
 $("#add_entry").click(function() {
   $("#writeroot").append(readrootText);
-
+  disableState();
 })
 
 $("#add_entry_2").click(function(){
   $("#writeroot2").append(readrootText_2);
 })
+
+function addEntryToList() {
+  var countryList=$(".country")
+  return countryList;
+}
+function disableState() {
+  var countryList = addEntryToList();
+  countryList.each(function(){
+    var country = $(this);
+    var state = country.parent().next().children();
+    country.change(function(){
+      if(!(country.val() === "United States")){
+        console.log("not US");
+        state.prop("disabled",true)
+        state.parent().removeClass("has-error has-danger");
+        state.next().hide();
+        state.val('');
+      }
+      else{
+        console.log("is US");
+        state.prop("disabled", false);
+        state.prop("required", true);
+        state.next().show();
+
+      }
+
+    })
+  })
+
+}
+disableState();
+
+// var stateList = $(".state");
