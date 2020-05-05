@@ -1,7 +1,6 @@
 function handleLabels() {
   $(".form-group .form-control").blur(function(){
 	   if($(this).val()!=""){
-       console.log("label here");
 		   $(this).siblings("label").addClass("active");
 	   }else{
 		    $(this).siblings("label").removeClass("active");

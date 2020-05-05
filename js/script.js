@@ -1,22 +1,30 @@
 $("#myForm").validator().on("submit", function(event) {
   if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        // cformError();
-        // csubmitMSG(false, "Please fill all fields!");
         console.log("error");
+        submitFailed();
     } else {
-        // everything looks good!
         event.preventDefault();
         csubmitForm();
+        submitSuccess();
         console.log("Success");
     }
 });
+
+function submitSuccess() {
+  $(".success").show();
+}
+
+function submitFailed() {
+  $(".failed").show();
+}
+
 function csubmitForm() {
   const scriptURL = 'https://script.google.com/macros/s/AKfycbxcBdPBu-sKht-W_qPSSk9hnX7_o8hL0piBsIDz-hF9W_iBWg/exec'
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .then(data => console.log(data))
+    // .then(response => console.log('Success!', response))
+    .then(response => submitSuccess())
+
     .catch(error => console.error('Error!', error.message))
 }
 
@@ -277,6 +285,9 @@ function toggleFields() {
     if (!($("#car-select").val() === "Yes")){
       $(".car-div").slideUp();
       $(".car-field").attr("required",false);
+      $(".car-field").parent().removeClass("has-danger");
+      $(".car-field").parent().removeClass("has-error");
+
     }
 
     else{
@@ -291,6 +302,8 @@ function toggleOther() {
   if (!($("#note-reason").val()=== "Other")) {
     $(".other-div").slideUp();
     $("#Other").attr("required",false);
+    $(".car-field").parent().removeClass("has-danger");
+    $(".car-field").parent().removeClass("has-error");
   }
   else {
     $(".other-div").slideDown();

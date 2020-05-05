@@ -1,62 +1,11 @@
+
 $('#previewBtn').click(function() {
-     /* when the button in the form, display the entered values in the modal */
 
-     // $('#c-applicant-f-name').text($('#applicant-f-name').val());
-     // $('#c-applicant-l-name').text($('#applicant-l-name').val());
-
-     // $("form input[type='text'], form input[type='email'], form input[type='number'], form input[type='checkbox'], form select, form textarea, form input[type='radio']:checked").each(
-     //   function(index){
-     //     var input = $(this);
-     //     var editBtnID= input.attr('name');
-     //     var originalField = $("form input[name='"+editBtnID+"']");
-     //     // console.log(originalField);
-     //     // var  currentPanel = $(".js-active");
-     //     // var panelTitle = currentPanel.children(".multisteps-form__title").text();
-     //     var panelTitle = originalField.parent().parent().parent().parent().children(".multisteps-form__title").text();
-     //     var tableAppend;
-     //     if (!(input.val()==="")) {
-     //       if (panelTitle==="Applicant Information") {
-     //         tableAppend = "#step1Table";
-     //       }
-     //       else if (panelTitle==="Guarantors") {
-     //         tableAppend = "#step2Table";
-     //       }
-     //       else if (panelTitle==="Rental History") {
-     //         tableAppend = "#step3Table";
-     //       }
-     //       else if (panelTitle==="Employment") {
-     //         tableAppend = "#step4Table";
-     //       }
-     //       else if (panelTitle==="Terms and Conditions") {
-     //         tableAppend = "#step5Table";
-     //       }
-     //       $(tableAppend).append(`
-     //                                <tr class="d-flex">
-     //                                  <th class="col-5">`+input.attr('placeholder')+`</th><td class="col-7">`+input.val()+`</td>
-     //                                </tr>
-     //                              `);
-     //       // var originalField2 = $("form select[name='"+editBtnID+"']");
-     //
-     //     }
-     //     else {
-     //       return ;
-     //     }
-     //   }
-     // );
-     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
      $("form input[type='text'], form input[type='email'], form input[type='number'], form input[type='checkbox'], form select, form textarea, form input[type='radio']:checked").each(
         function(index){
           var input = $(this);
           if (!(input.val()==="") && !(input.val()===null)) {
             $("#prevTable").append('<tr class="d-flex"><th class="col-5">'+input.attr('data-table')+'</th><td class="col-7">'+input.val()+'</td></tr>');
-            // var editBtn= $('#'+input.attr('name'));
-            // console.log(editBtn);
-            // var editBtnID= input.attr('name');
-            // var originalField = $("form input[name='"+editBtnID+"']");
-            // var originalField2 = $("form select[name='"+editBtnID+"']");
-
-
-
           }
           else {
             return ;
@@ -75,51 +24,6 @@ $('#editBtn').click(function() {
 
 })
 
-
-
-
-// function disableState(countryId, stateId) {
-//   var country = $(countryId);
-//   var state = $(stateId);
-//   country.change(function () {
-//      // disableState("#country-1","#state-1");
-//      if (!(country.val() === "United States")) {
-//        // console.log("not US");
-//        state.prop("disabled", true);
-//        state.prop("required", false);
-//        state.parent().removeClass("has-error has-danger");
-//        state.next().hide();
-//        state.val('');
-//
-//
-//      }
-//      else {
-//        // console.log("is US");
-//        state.prop("disabled", false);
-//        state.prop("required", true);
-//        // state.parent().addClass("has-error has-danger");
-//        state.next().show();
-//
-//        // state.parent().addClass("has-error has-danger");
-//
-//      }
-//   });
-//
-//   // return country, state;
-// }
-//
-// disableState("#country-1","#state-1");
-// disableState("#country-2","#state-2");
-// disableState("#country-3","#state-3");
-// disableState("#country-4","#state-4");
-// disableState("#country-5","#state-5");
-
-// var countryList= $(".country");
-
-
-//  $("#country-1").change(function () {
-//     disableState("#country-1","#state-1");
-// });
 
 var index1 = 0;
 var index2 = 0;
@@ -461,8 +365,7 @@ $("#add_entry").click(function() {
   $("#writeroot").append(readrootText);
   handleLabels();
   handleValLabel();
-  // disableState();
-})
+s})
 
 $("#add_entry_2").click(function(){
   $("#writeroot2").append(readrootText_2);

@@ -48,12 +48,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" >Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
 
             </div>
           </div>
@@ -393,14 +393,14 @@
                       </select>
                       <label for="note-reason">If yes, please note reason:</label>
                       <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="otherAppend">
-                      <div class="form-row mt-4 other-div" style="display: none;">
+                      <div class="otherAppend">
+                        <div class="form-row mt-4 other-div" style="display: none;">
                           <div class="col-lg-12 col-sm-12 form-group">
                             <input id="Other" name="other-reasons" data-table="Other" data-error="Please fill out this field." name="other-reason" type="text" class="other-field multisteps-form__input form-control" placeholder="Other">
                             <label for="Other">Other</label>
                             <div class="help-block with-errors"></div>
                           </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1115,12 +1115,22 @@
                     </thead>
                   </table> -->
 
-                  <div class="button-row d-flex mt-4">
+                  <div class="row d-flex mt-4">
                     <!-- <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button> -->
                     <!-- <button class="btn btn-primary js-btn-preview ml-auto" id="previewBtn" type="button" title="Preview" data-toggle="modal" data-target="#myModal">Preview Submission</button> -->
                     <!-- <button type="button"  class="button-1  btn btn-primary btn-lg ml-auto" data-toggle="modal" data-target="#myModal">Join TERPX</button> </a> -->
-                    <button class="btn btn-primary " id="editBtn" type="button" title="Prev">Edit</button>
+                    <button class="btn btn-primary" id="editBtn" type="button" title="Prev">Edit</button>
+                    <!-- <div class="failed pt-5">
+                      <h4 class="text-danger">Submission Failed</h4>
+                    </div> -->
                     <button class="btn btn-success ml-auto" type="submit" title="Send">Submit</button>
+                  </div>
+                  <div class="success pt-1">
+                    <h7 class="text-success">Submission Successful</h7>
+                  </div>
+
+                  <div class="failed pt-1">
+                    <h7 class="text-danger">Submission Failed plaese check invalid fields</h7>
                   </div>
                 </div>
               </div>

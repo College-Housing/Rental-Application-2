@@ -337,3 +337,14 @@ textarea:-webkit-autofill:active  {
 ::placeholder {
   color: transparent !important;
 }
+
+.success{
+  text-align: center;
+  display: none;
+
+}
+.failed{
+  text-align: center;
+  display: none;
+
+}
