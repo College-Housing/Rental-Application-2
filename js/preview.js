@@ -212,6 +212,8 @@ var readrootText = `<div class="readrootContainer">
           <label for="rental-zip`+generateFor()+`">Zip number</label>
           <div class="help-block with-errors"></div>
         </div>
+      </div>
+      <div class="form-row mt-4">
         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
         <textarea id="rental-add-1`+generateId()+`" required data-table="Rental address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
         <label for="rental-add-1`+generateFor()+`">Address 1</label>
@@ -380,6 +382,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="employer-zip`+generateFor()+`">Zip number</label>
                               <div class="help-block with-errors"></div>
                               </div>
+
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                                 <textarea id="employer-add-1`+generateId()+`" required data-table="Employer address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="employer-add-1`+generateFor()+`">Address 1</label>
@@ -456,43 +459,13 @@ var readrootText_2 = `<div class="readrootContainer">
 
 $("#add_entry").click(function() {
   $("#writeroot").append(readrootText);
-  disableState();
+  handleLabels();
+  handleValLabel();
+  // disableState();
 })
 
 $("#add_entry_2").click(function(){
   $("#writeroot2").append(readrootText_2);
+  handleLabels();
+  handleValLabel();
 })
-
-function addEntryToList() {
-  var countryList=$(".country")
-  return countryList;
-}
-function disableState() {
-  var countryList = addEntryToList();
-  countryList.each(function(){
-    var country = $(this);
-    var state = country.parent().next().children();
-    country.change(function(){
-      if(!(country.val() === "United States")){
-        console.log("not US");
-        state.prop("disabled",true)
-        state.prop("required", false);
-        state.parent().removeClass("has-error has-danger");
-        state.next().hide();
-        state.val('');
-      }
-      else{
-        console.log("is US");
-        state.prop("disabled", false);
-        state.prop("required", true);
-        state.next().show();
-
-      }
-
-    })
-  })
-
-}
-disableState();
-
-// var stateList = $(".state");

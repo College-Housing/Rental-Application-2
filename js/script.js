@@ -16,6 +16,7 @@ function csubmitForm() {
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => console.log('Success!', response))
+    .then(data => console.log(data))
     .catch(error => console.error('Error!', error.message))
 }
 

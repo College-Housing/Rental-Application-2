@@ -48,12 +48,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" >Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" >Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
 
             </div>
           </div>
@@ -171,6 +171,8 @@
                       <label for="applicant-zip">Zip Number</label>
                       <div class="help-block with-errors"></div>
                     </div>
+                  </div>
+                  <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
                       <textarea id="applicant-add-1" required data-table="Applicant Address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                       <label for="applicant-add-1">Address 1</label>
@@ -382,7 +384,7 @@
                   <div id="ifYesCheck" class="form-row mt-4" style="display:none;">
                     <div class="col form-group">
                       <!-- <p class="radio-button-txt">If yes, please note reason:</p> -->
-                      <select id="note-reason"  data-table="Reason for choosing no?" required data-error="Please note the reason." type="text" class="multisteps-form__input form-control" placeholder="Reason for choosing No">
+                      <select id="note-reason"  data-table="Reason for choosing yes?" required data-error="Please note the reason." type="text" class="multisteps-form__input form-control" name="why-don't-both-parents-sign" placeholder="Reason for choosing yes">
                         <option value="" disabled selected></option>
                         <option value="Passed away">Passed away</option>
                         <option value="Have no contact">Have no contact</option>
@@ -395,7 +397,7 @@
                     <div class="otherAppend">
                       <div class="form-row mt-4 other-div" style="display: none;">
                           <div class="col-lg-12 col-sm-12 form-group">
-                            <input id="Other" data-table="Other" data-error="Please fill out this field." name="other-reason" type="text" class="other-field multisteps-form__input form-control" placeholder="Other">
+                            <input id="Other" name="other-reasons" data-table="Other" data-error="Please fill out this field." name="other-reason" type="text" class="other-field multisteps-form__input form-control" placeholder="Other">
                             <label for="Other">Other</label>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -496,13 +498,15 @@
                       <label for="parent-1-zip">Zip number</label>
                       <div class="help-block with-errors"></div>
                     </div>
+                  </div>
+                  <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <textarea required data-table="Parent 1 Address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                      <textarea required data-table="Parent 1 Address 1" data-error="Please enter your address." name="parent-1-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                       <label for="parent-1-add-1">Address 1</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <textarea id="parent-1-add-2" required data-table="Parent 1 Address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                      <textarea id="parent-1-add-2" required data-table="Parent 1 Address 2" data-error="Please enter your address." name="parent-1-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                       <label for="parent-1-add-2">Address 2</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -623,13 +627,15 @@
                       <label for="parent-2-zip">Zip number</label>
                       <div class="help-block with-errors"></div>
                     </div>
+                  </div>
+                  <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <textarea id="parent-2-add-1" required data-table="Parent 2 address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                      <textarea id="parent-2-add-1" required data-table="Parent 2 address 1" data-error="Please enter your address." name="parent-2-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                       <label for="parent-2-add-1">Address 1</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <textarea id="parent-2-add-2" required data-table="Parent 2 address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                      <textarea id="parent-2-add-2" required data-table="Parent 2 address 2" data-error="Please enter your address." name="parent-2-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                       <label for="parent-2-add-2">Address 2</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -670,7 +676,6 @@
                   <div class="form-row mt-4">
                     <div id="readroot">
                       <div class="readrootContainer">
-
                         <h4 class="multisteps-form__title">Rental History</h4>
                         <div class="form-row mt-4">
                           <div class="col">
@@ -751,12 +756,12 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="rental-add-1">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                                 <label for="rental-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -814,9 +819,6 @@
                         <a class="rem-rental-history" id="remBtn" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a>
                       </div>
                     </div>
-                    <!-- end readroot -->
-                    <!-- <a class="add-rental-history"  onclick="addEntry1();">+ Add Rental History Entry</a> -->
-
                     </div>
                     <div id="writeroot"></div>
                     <div class="form-row mt-4">
@@ -943,12 +945,12 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="employer-add-1" required data-table="Employer address 1" data-error="Please enter your address." name="applicant-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <textarea id="employer-add-1" required data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="employer-add-1">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="employer-add-2" required data-table="Employer address 2" data-error="Please enter your address." name="applicant-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <textarea id="employer-add-2" required data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                                 <label for="employer-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
