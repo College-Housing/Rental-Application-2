@@ -274,7 +274,36 @@ const setAnimationType = newType => {
 };
 
 
-toggleFields();
+var carFields = `
+<div class="form-row mt-4 car-div" style="display: none;">
+    <div class="col-lg-6 col-sm-12 form-group">
+      <input required id="car-make" data-table="Car Make" data-error="Please fill out this field." name="car-make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
+      <label for="car-make">Car Make</label>
+      <div class="help-block with-errors"></div>
+    </div>
+  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+    <input  required id="car-model" data-table="Car Model" data-error="Please fill out this field." name="car-model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
+    <label for="car-model">Car Model</label>
+    <div class="help-block with-errors"></div>
+  </div>
+</div>
+<div class="form-row mt-4 car-div" style="display: none;">
+  <div class="col-lg-6 col-sm-12 form-group">
+    <input  required id="license-plate" data-table="Car license plate number"  data-error="Please fill out this field." name="license-plate-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
+    <label for="license-plate">Car license plate number</label>
+    <div class="help-block with-errors"></div>
+  </div>
+  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+    <input  required id="driver-license" data-table="Drivers license number" data-error="Please fill out this field." name="driver-license-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
+    <label for="driver-license">Drivers license number</label>
+    <div class="help-block with-errors"></div>
+  </div>
+</div>
+
+
+`
+
+// toggleFields();
 
  $("#car-select").change(function () {
     toggleFields();
@@ -284,6 +313,9 @@ function toggleFields() {
     const x = $(".car-div");
     if (!($("#car-select").val() === "Yes")){
       $(".car-div").slideUp();
+      $(".car-div").detach();
+      var currentPanel =getCurrentPanel();
+      currentPanel.validator('update');
       $(".car-field").attr("required",false);
       $(".car-field").parent().removeClass("has-danger");
       $(".car-field").parent().removeClass("has-error");
@@ -291,21 +323,35 @@ function toggleFields() {
     }
 
     else{
-
+      $("#carInfo").append(carFields);
+      var currentPanel =getCurrentPanel();
+      currentPanel.validator('update');
       $(".car-div").slideDown();
       $(".car-field").attr("required",true);
     }
 }
 
+var otherAppend = `
+<div class="form-row mt-4 other-div" style="display: none;">
+  <div class="col-lg-12 col-sm-12 form-group">
+    <input id="Other" name="other-reasons" data-table="Other" data-error="Please fill out this field." name="other-reason" type="text" class="other-field multisteps-form__input form-control" placeholder="Other">
+    <label for="Other">Other</label>
+    <div class="help-block with-errors"></div>
+  </div>
+</div>
+`
+
 function toggleOther() {
   const x =$(".other-div");
   if (!($("#note-reason").val()=== "Other")) {
     $(".other-div").slideUp();
+    $(".other-div").detach();
     $("#Other").attr("required",false);
-    $(".car-field").parent().removeClass("has-danger");
-    $(".car-field").parent().removeClass("has-error");
   }
   else {
+    $("#otherAppend").append(otherAppend);
+    var currentPanel =getCurrentPanel();
+    currentPanel.validator('update');
     $(".other-div").slideDown();
     $("#Other").attr("required",true);
   }

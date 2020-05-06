@@ -112,8 +112,8 @@ var readrootText = `<div class="readrootContainer">
           <div class="help-block with-errors"></div>
         </div>
         <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-          <input id="rental-zip`+generateId()+`" required data-table="Rental Zip num." data-error="Please enter Zip." placeholder="Zip number" name="rental-history-zip-a" type="text" class="multisteps-form__input form-control">
-          <label for="rental-zip`+generateFor()+`">Zip number</label>
+          <input id="rental-zip`+generateId()+`" required data-table="Rental Zip Code" data-error="Please enter Zip Code" placeholder="Zip Code" name="rental-history-zip-a" type="text" class="multisteps-form__input form-control">
+          <label for="rental-zip`+generateFor()+`">Zip Code</label>
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -282,8 +282,8 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="employer-zip`+generateId()+`" data-table="Employer Zip num." data-error="Please enter Zip num." name="employer-zip-a" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
-                                <label for="employer-zip`+generateFor()+`">Zip number</label>
+                                <input id="employer-zip`+generateId()+`" data-table="Employer Zip Code" data-error="Please enter Zip Code" name="employer-zip-a" type="text" class="multisteps-form__input form-control" placeholder="Zip Code">
+                                <label for="employer-zip`+generateFor()+`">Zip Code</label>
                               <div class="help-block with-errors"></div>
                               </div>
 

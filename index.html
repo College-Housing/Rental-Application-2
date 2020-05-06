@@ -166,8 +166,8 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip number" data-error="Please enter your Zip number." class="multisteps-form__input form-control" type="text" placeholder="Zip number"/>
-                      <label for="applicant-zip">Zip Number</label>
+                      <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip Code" data-error="Please enter your Zip Code." class="multisteps-form__input form-control" type="text" placeholder="Zip Code"/>
+                      <label for="applicant-zip">Zip Code</label>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -205,33 +205,33 @@
                   <div class="form-row mt-4">
                     <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="group-lead" required data-table="Group lead member name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Member Name">
-                      <label for="group-lead">Group lead member name</label>
+                      <input id="group-lead" required data-table="Group lead name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Name">
+                      <label for="group-lead">Group lead name</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="member-1" required data-table="1. Group member name" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
-                      <label for="member-1">1. Group member name</label>
+                      <input id="member-1" required data-table="Group member name (1)" data-error="Please enter the group member name" name="group-member-1" type="text" class="form-control textarea-form" placeholder="1. Group Member Name">
+                      <label for="member-1">Group member name (1)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="member-2" required data-table="2. Group member name" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
-                      <label for="member-2">2. Group member name</label>
+                      <input id="member-2" required data-table="Group member name (2)" data-error="Please enter the group member name" name="group-member-2" type="text" class="form-control textarea-form" placeholder="2. Group Member Name">
+                      <label for="member-2">Group member name (2)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="member-3" required data-table="3. Group member name" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
-                      <label for="member-3">3. Group member name</label>
+                      <input id="member-3" required data-table="Group member name (3)" data-error="Please enter the group member name" name="group-member-3" type="text" class="form-control textarea-form" placeholder="3. Group Member Name">
+                      <label for="member-3">Group member name (3)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="member-4" required data-table="4. Group member name" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
-                      <label for="member-4">4. Group member name</label>
+                      <input id="member-4" required data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
+                      <label for="member-4">Group member name (4)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="member-5" required data-table="5. Group member name" data-error="Please enter the group member name" name="group-member-5" type="text" class="form-control textarea-form" placeholder="5. Group Member Name">
-                      <label for="member-5">5. Group member name</label>
+                      <input id="member-5" required data-table="Group member name (5)" data-error="Please enter the group member name" name="group-member-5" type="text" class="form-control textarea-form" placeholder="5. Group Member Name">
+                      <label for="member-5">Group member name (5)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -255,31 +255,31 @@
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
-                  <div class="carInfo">
-                    <div class="form-row mt-4 car-div" style="display: none;">
+                  <div id="carInfo" class="carInfo">
+                    <!-- <div class="form-row mt-4 car-div" style="display: none;">
                         <div class="col-lg-6 col-sm-12 form-group">
-                          <input id="car-make" data-table="Car Make" data-error="Please fill out this field." name="car-make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
+                          <input required id="car-make" data-table="Car Make" data-error="Please fill out this field." name="car-make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
                           <label for="car-make">Car Make</label>
                           <div class="help-block with-errors"></div>
                         </div>
                       <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                        <input id="car-model" data-table="Car Model" data-error="Please fill out this field." name="car-model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
+                        <input  required id="car-model" data-table="Car Model" data-error="Please fill out this field." name="car-model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
                         <label for="car-model">Car Model</label>
                         <div class="help-block with-errors"></div>
                       </div>
                     </div>
                     <div class="form-row mt-4 car-div" style="display: none;">
                       <div class="col-lg-6 col-sm-12 form-group">
-                        <input id="license-plate" data-table="Car license plate number"  data-error="Please fill out this field." name="license-plate-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
+                        <input  required id="license-plate" data-table="Car license plate number"  data-error="Please fill out this field." name="license-plate-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
                         <label for="license-plate">Car license plate number</label>
                         <div class="help-block with-errors"></div>
                       </div>
                       <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                        <input id="driver-license" data-table="Drivers license number" data-error="Please fill out this field." name="driver-license-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
+                        <input  required id="driver-license" data-table="Drivers license number" data-error="Please fill out this field." name="driver-license-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
                         <label for="driver-license">Drivers license number</label>
                         <div class="help-block with-errors"></div>
                       </div>
-                    </div>
+                    </div> -->
 
                   </div>
                   <div class="form-row mt-4">
@@ -392,14 +392,14 @@
                       </select>
                       <label for="note-reason">If yes, please note reason:</label>
                       <div class="help-block with-errors"></div>
-                      <div class="otherAppend">
-                        <div class="form-row mt-4 other-div" style="display: none;">
+                      <div id="otherAppend" class="otherAppend">
+                        <!-- <div class="form-row mt-4 other-div" style="display: none;">
                           <div class="col-lg-12 col-sm-12 form-group">
                             <input id="Other" name="other-reasons" data-table="Other" data-error="Please fill out this field." name="other-reason" type="text" class="other-field multisteps-form__input form-control" placeholder="Other">
                             <label for="Other">Other</label>
                             <div class="help-block with-errors"></div>
                           </div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   </div>
@@ -493,8 +493,8 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="parent-1-zip" required data-table="Parent 1 Zip num." data-error="Please enter Zip." name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
-                      <label for="parent-1-zip">Zip number</label>
+                      <input id="parent-1-zip" required data-table="Parent 1 Zip Code." data-error="Please enter Zip Code" name="parent-1-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip Code">
+                      <label for="parent-1-zip">Zip Code</label>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -622,8 +622,8 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="parent-2-zip" required data-table="Parent 2 Zip num." data-error="Please enter Zip." name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
-                      <label for="parent-2-zip">Zip number</label>
+                      <input id="parent-2-zip" required data-table="Parent 2 Zip Code" data-error="Please enter Zip Code" name="parent-2-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip Code">
+                      <label for="parent-2-zip">Zip Code</label>
                       <div class="help-block with-errors"></div>
                     </div>
                   </div>
@@ -750,7 +750,7 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="rental-zip" required data-table="Rental Zip num." data-error="Please enter Zip." placeholder="Zip number" name="rental-history-zip-a" type="text" class="multisteps-form__input form-control nameF">
+                                <input id="rental-zip" required data-table="Rental Zip Code" data-error="Please enter Zip Code" placeholder="Zip Code" name="rental-history-zip-a" type="text" class="multisteps-form__input form-control nameF">
                                 <label for="rental-zip">Zip Code</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -976,8 +976,8 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="employer-zip" data-table="Employer Zip num." data-error="Please enter Zip num." name="employer-zip-a" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
-                                <label for="employer-zip">Zip number</label>
+                                <input id="employer-zip" data-table="Employer Zip Code" data-error="Please enter Zip Code." name="employer-zip-a" type="text" class="multisteps-form__input form-control" placeholder="Zip Code">
+                                <label for="employer-zip">Zip Code</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
@@ -1157,7 +1157,7 @@
                 <h4 class="multisteps-form__title">Preview Submission</h4>
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
-                    <p>Are you sure you want to submit the following Information?.</p>
+                    <p>Are you sure you want to submit the following Information?</p>
                   </div>
                   <table id="prevTable" class="table table-bordered">
 
@@ -1232,7 +1232,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
   <script src="js\floatingLabels.js"></script>
   <script  src="js/script.js"></script>
-  <script src="js\steps.js"></script>
   <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
   <script src="js\preview.js"></script>
   <script src="js\multipleNames.js"></script>
