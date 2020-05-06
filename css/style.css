@@ -348,3 +348,8 @@ textarea:-webkit-autofill:active  {
   display: none;
 
 }
+
+.hidden-area{
+  position: absolute;
+  display: none;
+}

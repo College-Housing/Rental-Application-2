@@ -33,7 +33,6 @@
         <h2 class="col-12 ml-auto mr-auto mb-4 content__title-sm ">Please complete this application accuratley and we will be in touch with you shortly after with your next steps.</h2>
 
       </div>
-
     </div>
     <!-- <div class="container row" > -->
       <!--content title-->
@@ -682,11 +681,11 @@
                             <h5 class="card-title">Rental Address:</h5>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input disabled required data-table="Rental country" data-error="Please enter Country."  placeholder="Country" name="rental-history-country" type="text" value="United States" class="multisteps-form__input form-control country" ></input>
+                                <input disabled required data-table="Rental country" data-error="Please enter Country."  placeholder="Country" name="rental-history-country" type="text" value="United States" class="multisteps-form__input form-control country nameF" ></input>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <select id="rental-state" required data-table="Rental state" data-error="Please choose an answer." placeholder="State" name="rental-history-state" class="multisteps-form__select form-control state">
+                                <select id="rental-state" required data-table="Rental state" data-error="Please choose an answer." placeholder="State" name="rental-history-state-a" class="multisteps-form__select form-control state nameF">
                                   <option value="" disabled selected ></option>
                                   <option value="AL">Alabama</option>
                                   <option value="AK">Alaska</option>
@@ -746,22 +745,22 @@
                             </div>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="rental-city" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city" type="text" class="multisteps-form__input form-control">
+                                <input id="rental-city" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city-a" type="text" class="multisteps-form__input form-control nameF">
                                 <label for="rental-city">City</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="rental-zip" required data-table="Rental Zip num." data-error="Please enter Zip." placeholder="Zip number" name="rental-history-zip" type="text" class="multisteps-form__input form-control">
-                                <label for="rental-zip">Zip number</label>
+                                <input id="rental-zip" required data-table="Rental Zip num." data-error="Please enter Zip." placeholder="Zip number" name="rental-history-zip-a" type="text" class="multisteps-form__input form-control nameF">
+                                <label for="rental-zip">Zip Code</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <textarea id="rental-add-1" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1-a" type="text" class="form-control textarea-form nameF" placeholder="Address 1"></textarea>
                                 <label for="rental-add-1">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <textarea id="rental-add-2" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2-a" type="text" class="form-control textarea-form nameF" placeholder="Address 2"></textarea>
                                 <label for="rental-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -770,19 +769,19 @@
                         </div>
                         <div class="form-row mt-4">
                           <div class="col-lg-6 col-sm-12 form-group">
-                            <input id="rental-date" required data-table="Rental date" data-error="Please enter Rental dates." name="rental-history-date" type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" class="multisteps-form__input form-control" placeholder="Rental Dates">
+                            <input id="rental-date" required data-table="Rental date" data-error="Please enter Rental dates." name="rental-history-date-a" type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" class="multisteps-form__input form-control nameF" placeholder="Rental Dates">
                             <label for="rental-date">Rental Date</label>
                             <div class="help-block with-errors"></div>
                           </div>
                           <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                            <input id="monthly-rent" required data-table="Rental monthly rent" data-error="Please enter Monthly Rent."  placeholder="Monthly Rent" name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control" placeholder="Monthly Rent">
+                            <input id="monthly-rent" required data-table="Rental monthly rent" data-error="Please enter Monthly Rent."  placeholder="Monthly Rent" name="rental-history-monthly-rent-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Monthly Rent">
                             <label for="monthly-rent">Monthly rent</label>
                             <div class="help-block with-errors"></div>
                           </div>
                         </div>
                         <div class="form-row mt-4">
                           <div class="col form-group">
-                            <input id="reason-for-leaving" required data-table="Reason for leaving" data-error="Please enter Reason for leaving." name="reason-for-leaving" type="text" class="multisteps-form__input form-control" placeholder="Reason For leaving">
+                            <input id="reason-for-leaving" required data-table="Reason for leaving" data-error="Please enter Reason for leaving." name="reason-for-leaving-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Reason For leaving">
                             <label for="reason-for-leaving">Reason for leaving</label>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -792,12 +791,12 @@
                             <h5 class="card-title">Landlord Information:</h5>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input id="landlord-fname" required data-table="Landlord first name" data-error="Please enter First Name." name="landlord-first-name" type="text" class="multisteps-form__input form-control" placeholder="First Name">
+                                <input id="landlord-fname" required data-table="Landlord first name" data-error="Please enter First Name." name="landlord-first-name-a" type="text" class="multisteps-form__input form-control nameF" placeholder="First Name">
                                 <label for="landlord-fname">First Name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="landlord-lname" required data-table="Landlord last name" data-error="Please enter Last Name." name="landlord-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
+                                <input id="landlord-lname" required data-table="Landlord last name" data-error="Please enter Last Name." name="landlord-last-name-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Last Name">
                                 <label for="landlord-lname">Last name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -806,17 +805,17 @@
                         </div>
                         <div class="form-row mt-4">
                           <div class="col-lg-6 col-sm-12 form-group">
-                            <input id="landlord-phone-number" required data-table="Landlord Mobile/Phone num." data-error="Please enter Phone number." name="landlord-phone" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
+                            <input id="landlord-phone-number" required data-table="Landlord Mobile/Phone num." data-error="Please enter Phone number." name="landlord-phone-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Mobile/Phone Number">
                             <label for="landlord-phone-number">Mobile/Phone number</label>
                             <div class="help-block with-errors"></div>
                           </div>
                           <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                            <input id="landlord-email" required data-table="Landlord email address" data-error="Please enter Email address." name="landlord-email" type="email" class="multisteps-form__input form-control" placeholder="Email address">
+                            <input id="landlord-email" required data-table="Landlord email address" data-error="Please enter Email address." name="landlord-email-a" type="email" class="multisteps-form__input form-control nameF" placeholder="Email address">
                             <label for="landlord-email">Email</label>
                             <div class="help-block with-errors"></div>
                           </div>
                         </div>
-                        <a class="rem-rental-history" id="remBtn" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a>
+                        <!-- <a class="rem-rental-history" id="remBtn" onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Rental History Entry</a> -->
                       </div>
                     </div>
                     </div>
@@ -827,10 +826,47 @@
                       </div>
                     </div>
                   <!-- <div id="writeroot"></div> -->
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="state-total" data-table="undefined" type="text" name="rental-history-state" class="multisteps-form__select form-control hidden">
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="city-total"  data-table="undefined" name="rental-history-city" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="zip-total"  data-table="undefined" name="rental-history-zip" type="text" class="multisteps-form__input form-control hidden" >
+                    <label for="landlord-email">city total</label>
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="add-1-total" data-table="undefined" name="rental-add-1" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="add-2-total" data-table="undefined" name="rental-add-2" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="date-total" data-table="undefined" name="rental-history-date" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="rent-total" data-table="undefined" name="rental-history-monthly-rent" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="reason-total" data-table="undefined" name="reason-for-leaving" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="landlord-fname-total" data-table="undefined" name="landlord-first-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="landlord-lname-total" data-table="undefined" name="landlord-last-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="landlord-phone-total" data-table="undefined" name="landlord-phone" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="landlord-email-total" data-table="undefined" name="landlord-email" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
                   <div class="row">
                     <div class="button-row d-flex mt-4 col-12">
                       <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
-                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" onclick="rentalCallFunction()" type="button" title="Next">Next</button>
                     </div>
                   </div>
                 </div>
@@ -847,19 +883,19 @@
                             <h5 class="card-title">Employer Information:</h5>
                             <div class="form-row mt-4">
                               <div class="col form-group">
-                                <input id="employer-name" required data-table="Employer name" data-error="Please enter Name." name="employer-name" type="text" class="multisteps-form__input form-control" placeholder="Employer Name">
+                                <input id="employer-name" required data-table="Employer name" data-error="Please enter Name." name="employer-name-a" type="text" class="multisteps-form__input form-control" placeholder="Employer Name">
                                 <label for="employer-name">Employer name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input id="employer-phone" required data-table="Employer Mobile/Phone num." data-error="Please enter Phone number." name="employer-phone" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                                <input id="employer-phone" required data-table="Employer Mobile/Phone num." data-error="Please enter Phone number." name="employer-phone-a" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
                                 <label for="employer-phone">Mobile/Phone number</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input name="employer-email" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                                <input name="employer-email-a" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
                                 <label for="employer-email">Email</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -871,11 +907,11 @@
                             <h5 class="card-title">Employer Address (optional):</h5>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input  disabled data-table="Employer country" name="employer-country" type="text" class="multisteps-form__input form-control country" value="United States" placeholder="Country"></input>
+                                <input  disabled data-table="Employer country" name="employer-country-a" type="text" class="multisteps-form__input form-control country" value="United States" placeholder="Country"></input>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <select id="employer-state" data-table="Employer state" data-error="Please choose a state" name="employer-state" placeholder="State" class="multisteps-form__select form-control state">
+                                <select id="employer-state" data-table="Employer state" data-error="Please choose a state" name="employer-state-a" placeholder="State" class="multisteps-form__select form-control state">
                                   <option value="" disabled selected ></option>
                                   <option value="AL">Alabama</option>
                                   <option value="AK">Alaska</option>
@@ -935,22 +971,22 @@
                             </div>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="employer-city" data-table="Employer city" data-error="Please enter a city" name="employer-city"type="text" class="multisteps-form__input form-control" placeholder="City">
+                                <input id="employer-city" data-table="Employer city" data-error="Please enter a city" name="employer-city-a"type="text" class="multisteps-form__input form-control" placeholder="City">
                                 <label for="employer-city">City</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="employer-zip" data-table="Employer Zip num." data-error="Please enter Zip num." name="employer-zip" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
+                                <input id="employer-zip" data-table="Employer Zip num." data-error="Please enter Zip num." name="employer-zip-a" type="text" class="multisteps-form__input form-control" placeholder="Zip number">
                                 <label for="employer-zip">Zip number</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="employer-add-1" required data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <textarea id="employer-add-1" required data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="employer-add-1">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <textarea id="employer-add-2" required data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <textarea id="employer-add-2" required data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                                 <label for="employer-add-2">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -960,12 +996,12 @@
                         </div>
                         <div class="form-row mt-4">
                           <div class="col-lg-6 col-sm-12 form-group">
-                            <input id="your-position" required data-table="Your position" data-error="Please enter your Position." name="position-held" type="text" class="multisteps-form__input form-control" placeholder="Your Position">
+                            <input id="your-position" required data-table="Your position" data-error="Please enter your Position." name="position-held-a" type="text" class="multisteps-form__input form-control" placeholder="Your Position">
                             <label for="your-position">Your Position</label>
                             <div class="help-block with-errors"></div>
                           </div>
                           <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                            <input id="gross-salary" required data-table="Monthly gross salary" data-error="Please enter your Monthly gross salary." name="monthly-gross-salary" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
+                            <input id="gross-salary" required data-table="Monthly gross salary" data-error="Please enter your Monthly gross salary." name="monthly-gross-salary-a" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
                             <label for="gross-salary">Monthly gross salary</label>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -975,7 +1011,7 @@
                             <h5 class="card-title">Employment Dates:</h5>
                             <div class="form-row mt-4 date-from-to-row">
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-from" required data-table="Started employment at:" data-error="Please enter a date." name="employment-date-from" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
+                                <input id="employment-date-from" required data-table="Started employment at:" data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
                                 <label for="employment-date-from">Started employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -984,7 +1020,7 @@
                                 <i class="fas fa-arrow-right"></i>
                               </div>
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-to" required data-table="Ended employment at:" data-error="Please enter a date" name="employment-date-to" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
+                                <input id="employment-date-to" required data-table="Ended employment at:" data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
                                 <label for="employment-date-to">Ended employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -996,26 +1032,26 @@
                             <h5 class="card-title">Supervisor Name:</h5>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input id="supervisor-fname" required data-table="Supervisor first name" data-error="Please enter First name." name="supervisor-first-name" type="text" class="multisteps-form__input form-control" placeholder="First name">
+                                <input id="supervisor-fname" required data-table="Supervisor first name" data-error="Please enter First name." name="supervisor-first-name-a" type="text" class="multisteps-form__input form-control" placeholder="First name">
                                 <label for="supervisor-fname">First name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                                <input id="supervisor-lname" required data-table="Supervisor last name" data-error="Please enter Last name." name="supervisor-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
+                                <input id="supervisor-lname" required data-table="Supervisor last name" data-error="Please enter Last name." name="supervisor-last-name-a" type="text" class="multisteps-form__input form-control" placeholder="Last name">
                                 <label for="supervisor-lname">Last name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>
                             <div class="form-row mt-4">
                               <div class="col form-group">
-                                <input id="supervisor-title" required data-table="Supervisor title" data-error="Please enter Supervisor title." name="supervisor-title" type="text" class="multisteps-form__input form-control" placeholder="Supervisor Title">
+                                <input id="supervisor-title" required data-table="Supervisor title" data-error="Please enter Supervisor title." name="supervisor-title-a" type="text" class="multisteps-form__input form-control" placeholder="Supervisor Title">
                                 <label for="supervisor-title">Supervisor title</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Employment Entry</a>
+                        <!-- <a class="rem-rental-history"  onclick="this.parentNode.parentNode.removeChild(this.parentNode);">x Remove Employment Entry</a> -->
                       </div>
                     </div>
                     <!-- end readroot -->
@@ -1027,10 +1063,57 @@
                     </div>
                     <!-- <a class="add-rental-history"  onclick="addEntry2();">+ Add Employment Entry</a> -->
                   </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-name-total" data-table="undefined" name="employer-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-phone-total" data-table="undefined" name="employer-phone" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-email-total" data-table="undefined" name="employer-email" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-state-total" data-table="undefined" type="text" name="employer-state" class="multisteps-form__select form-control hidden">
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-city-total"  data-table="undefined" name="employer-city" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-zip-total"  data-table="undefined" name="employer-zip" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-add-1-total" data-table="undefined" name="employer-add-1" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employer-add-2-total" data-table="undefined" name="employer-add-2" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="position-held-total" data-table="undefined" name="position-held" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="salary-total" data-table="undefined" name="monthly-gross-salary" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employment-from-total" data-table="undefined" name="employment-date-from" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="employment-to-total" data-table="undefined" name="employment-date-to" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="supervisor-fname-total" data-table="undefined" name="supervisor-first-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="supervisor-lname-total" data-table="undefined" name="supervisor-last-name" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+                  <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group hidden-area">
+                    <input id="supervisor-title-total" data-table="undefined" name="supervisor-title" type="text" class="multisteps-form__input form-control hidden" >
+                  </div>
+
+
                   <div class="row">
                     <div class="button-row d-flex mt-4 col-12">
                       <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
-                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" title="Next">Next</button>
+                      <button class="btn btn-primary ml-auto js-btn-next nextBtn" type="button" onclick="employerCallFunction();" title="Next">Next</button>
                     </div>
                   </div>
                 </div>
@@ -1152,6 +1235,7 @@
   <script src="js\steps.js"></script>
   <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
   <script src="js\preview.js"></script>
+  <script src="js\multipleNames.js"></script>
 
 
   <!-- <script src="js\btnManager.js"></script> -->
