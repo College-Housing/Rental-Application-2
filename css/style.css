@@ -71,6 +71,26 @@ label.active{
   font-size: 0.8rem;
 }
 
+input:not(:placeholder-shown) ~ label,
+input:-webkit-autofill ~ label /* <<<< Add these */
+{
+  left:10px;
+  top:-10px;
+  background:#fff;
+  padding:0 5px;
+  font-size: 0.8rem;
+}
+
+textarea:not(:placeholder-shown) ~ label,
+textarea:-webkit-autofill ~ label /* <<<< Add these */
+{
+  left:10px;
+  top:-10px;
+  background:#fff;
+  padding:0 5px;
+  font-size: 0.8rem;
+}
+
 /* input:-internal-autofill-selected {
 
   background-color: white !important;
@@ -90,7 +110,6 @@ textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-
 
 :disabled{
   background:#fff !important;
@@ -366,3 +385,9 @@ textarea:-webkit-autofill:active  {
   position: absolute;
   display: none;
 }
+/*
+input:-webkit-autofill,
+input:-webkit-autofill:hover{
+  -webkit-transition-delay: 9999999s; */
+  /* transitionProperty: 'background-color, color', */
+/* } */
