@@ -12,7 +12,13 @@ $("#myForm").validator().on("submit", function(event) {
 });
 
 function submitSuccess() {
-  $(".success").show();
+  setActiveStep(6);
+  setActivePanel(6);
+  window.scroll(0, 0);
+  $("#steps_slider").remove();
+  $("#title_text").remove();
+
+
 }
 
 function submitFailed() {
@@ -304,6 +310,8 @@ var carFields = `
 
  $("#car-select").change(function () {
     toggleFields();
+    handleLabels();
+    handleValLabel();
 });
 
 function toggleFields() {
@@ -357,6 +365,8 @@ function toggleOther() {
 toggleOther();
 $("#note-reason").change(function () {
    toggleOther();
+   handleLabels();
+   handleValLabel();
 });
 
 

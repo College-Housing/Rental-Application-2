@@ -58,7 +58,7 @@ function r_add1Function() {
 
 var r_add_2 ;
 var r_add_2_list = [];
-function r_add1Function() {
+function r_add2Function() {
     r_add_2_list = [];
     r_add_2= $("textarea[name='rental-add-2-a']");
     r_add_2.each(
@@ -174,7 +174,7 @@ function rentalCallFunction() {
   r_cityFunction();
   r_zipFunction();
   r_add1Function();
-  r_add1Function();
+  r_add2Function();
   r_dateFunction();
   r_rentFunction();
   r_reasonFunction();
@@ -193,10 +193,10 @@ function e_employerNameFunction() {
     e_employerName= $("input[name='employer-name-a']");
     e_employerName.each(
     function(index){
-        e_employerPhoneList.push($(this).val());
+        e_employerNameList.push($(this).val());
     }
     );
-    $("#employer-email-total").val(e_employerNameList);
+    $("#employer-name-total").val(e_employerNameList);
     // return $("#landlord-email-total").val();
 }
 

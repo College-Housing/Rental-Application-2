@@ -353,7 +353,7 @@ textarea:-webkit-autofill:active  {
 
 .success{
   text-align: center;
-  display: none;
+  /* display: none; */
 
 }
 .failed{

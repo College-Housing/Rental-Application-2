@@ -47,7 +47,7 @@ var readrootText = `
           <input disabled required data-table="Rental country" data-error="Please enter Country."  placeholder="Country" name="rental-history-country" type="text" value="United States" class="multisteps-form__input form-control country" ></input>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <select id="rental-state`+generateId()+`" required data-table="Rental state" data-error="Please choose an answer." placeholder="State" name="rental-history-state-a" class="multisteps-form__select form-control state">
             <option value="" disabled selected ></option>
             <option value="AL">Alabama</option>
@@ -105,22 +105,22 @@ var readrootText = `
           <label for="rental-state`+generateFor()+`">State</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <input id="rental-city`+generateId()+`" required data-table="Rental city" data-error="Please enter City"  placeholder="City" name="rental-history-city-a" type="text" class="multisteps-form__input form-control">
           <label for="rental-city`+generateFor()+`">City</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <input id="rental-zip`+generateId()+`" required data-table="Rental Zip Code" data-error="Please enter Zip Code" placeholder="Zip Code" name="rental-history-zip-a" type="number" class="multisteps-form__input form-control">
           <label for="rental-zip`+generateFor()+`">Zip Code</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <textarea id="rental-add-1`+generateId()+`" required data-table="Rental address 1" data-error="Please enter your address." name="rental-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
           <label for="rental-add-1`+generateFor()+`">Address 1</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <textarea id="rental-add-2`+generateId()+`" required data-table="Rental address 2" data-error="Please enter your address." name="rental-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
           <label for="rental-add-2`+generateFor()+`">Address 2</label>
           <div class="help-block with-errors"></div>
@@ -130,7 +130,7 @@ var readrootText = `
           <label for="rental-date`+generateFor()+`">Rental Date</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <input id="monthly-rent`+generateId()+`" required data-table="Rental monthly rent" data-error="Please enter Monthly Rent."  placeholder="Monthly Rent" name="rental-history-monthly-rent-a" type="text" class="multisteps-form__input form-control" placeholder="Monthly Rent">
           <label for="monthly-rent`+generateFor()+`">Monthly rent</label>
           <div class="help-block with-errors"></div>
@@ -152,7 +152,7 @@ var readrootText = `
           <label for="landlord-fname`+generateFor()+`">First Name</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <input id="landlord-lname`+generateId()+`" required data-table="Landlord last name" data-error="Please enter Last Name." name="landlord-last-name-a" type="text" class="multisteps-form__input form-control" placeholder="Last Name">
           <label for="landlord-lname`+generateFor()+`">Last name</label>
           <div class="help-block with-errors"></div>
@@ -162,7 +162,7 @@ var readrootText = `
           <label for="landlord-phone-number`+generateFor()+`">Mobile/Phone number</label>
           <div class="help-block with-errors"></div>
         </div>
-        <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+        <div class="col-lg-6 col-sm-12   form-group">
           <input id="landlord-email`+generateId()+`" required data-table="Landlord email address" data-error="Please enter Email address." name="landlord-email-a" type="email" class="multisteps-form__input form-control" placeholder="Email address">
           <label for="landlord-email`+generateFor()+`">Email</label>
           <div class="help-block with-errors"></div>
@@ -191,7 +191,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="employer-phone`+generateFor()+`">Mobile/Phone number</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <input id="employer-email`+generateId()+`" name="employer-email-a" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
                                 <label for="employer-email`+generateFor()+`">Email</label>
                                 <div class="help-block with-errors"></div>
@@ -207,7 +207,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <input  disabled data-table="Employer country" name="employer-country" type="text" class="multisteps-form__input form-control country" value="United States" placeholder="Employer Country"></input>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <select id="employer-state`+generateId()+`" data-table="Employer state" data-error="Please choose a state" name="employer-state-a" placeholder="State" class="multisteps-form__select form-control state">
                                   <option value="" disabled selected ></option>
                                   <option value="AL">Alabama</option>
@@ -265,23 +265,23 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="employer-state`+generateFor()+`">State</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <input id="employer-city`+generateId()+`" data-table="Employer city" data-error="Please enter a city" name="employer-city-a"type="text" class="multisteps-form__input form-control" placeholder="City">
                                 <label for="employer-city`+generateFor()+`">City</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <input id="employer-zip`+generateId()+`" data-table="Employer Zip Code" data-error="Please enter Zip Code" name="employer-zip-a" type="number" class="multisteps-form__input form-control" placeholder="Zip Code">
                                 <label for="employer-zip`+generateFor()+`">Zip Code</label>
                                 <div class="help-block with-errors"></div>
                               </div>
 
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <textarea id="employer-add-1`+generateId()+`" required data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="employer-add-1`+generateFor()+`">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <textarea id="employer-add-2`+generateId()+`" required data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                                 <label for="employer-add-2`+generateFor()+`">Address 2</label>
                                 <div class="help-block with-errors"></div>
@@ -291,7 +291,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="your-position`+generateFor()+`">Your Position</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <input id="gross-salary`+generateId()+`" required data-table="Monthly gross salary" data-error="Please enter your Monthly gross salary." name="monthly-gross-salary-a" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
                                 <label for="gross-salary`+generateFor()+`">Monthly gross salary</label>
                                 <div class="help-block with-errors"></div>
@@ -304,7 +304,7 @@ var readrootText_2 = `<div class="readrootContainer">
                             <h5 class="card-title">Employment Dates:</h5>
                             <div class="form-row mt-4 date-from-to-row">
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-from`+generateId()+`" required data-table="Started employment at:" data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
+                                <input id="employment-date-from`+generateId()+`" required data-table="Started:" data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
                                 <label for="employment-date-from`+generateFor()+`">Started employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -313,7 +313,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <i class="fas fa-arrow-right"></i>
                               </div>
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-to`+generateId()+`" required data-table="Ended employment at:" data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
+                                <input id="employment-date-to`+generateId()+`" required data-table="Ended:" data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
                                 <label for="employment-date-to`+generateFor()+`">Ended employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -329,7 +329,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="supervisor-fname`+generateFor()+`">First name</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
+                              <div class="col-lg-6 col-sm-12   form-group">
                                 <input id="supervisor-lname`+generateId()+`" required data-table="Supervisor last name" data-error="Please enter Last name." name="supervisor-last-name-a" type="text" class="multisteps-form__input form-control" placeholder="Last name">
                                 <label for="supervisor-lname`+generateFor()+`">Last name</label>
                                 <div class="help-block with-errors"></div>
