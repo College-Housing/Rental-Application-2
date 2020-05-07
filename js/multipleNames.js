@@ -287,7 +287,7 @@ function e_add1Function() {
 
 var e_add_2 ;
 var e_add_2_list = [];
-function e_add1Function() {
+function e_add2Function() {
     e_add_2_list = [];
     e_add_2= $("textarea[name='employer-add-2-a']");
     e_add_2.each(
@@ -408,7 +408,7 @@ function employerCallFunction() {
   e_cityFunction();
   e_zipFunction();
   e_add1Function();
-  e_add1Function();
+  e_add2Function();
   e_positionFunction();
   e_salaryFunction();
   e_dateFromFunction();
