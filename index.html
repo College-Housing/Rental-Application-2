@@ -47,12 +47,12 @@
         <div class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" >Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" >Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
 
             </div>
           </div>
@@ -83,12 +83,12 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-email" required data-table="Applicant email address" data-error="Please enter a valid Email address." name="applicant-email" type="email" class="multisteps-form__input form-control" placeholder="Email address">
+                      <input id="applicant-email" required data-table="Applicant email address" data-pattern-error="pattern error" data-required-error="Please enter a valid Email address." name="applicant-email" type="email" class="multisteps-form__input form-control" placeholder="Email address">
                       <label for="applicant-email">Email Address</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0  form-group">
-                      <input id="applicant-birthdate" required data-table="Applicant birthdate" data-error="Please enter your Birthdate." name="applicant-birthdate" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Birthdate">
+                      <input id="applicant-birthdate" required data-table="Applicant birthdate" max="2010-12-31" data-error="Please enter your Birthdate." name="applicant-birthdate" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Birthdate">
                       <label for="applicant-birthdate">Birthdate</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -166,7 +166,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 mt-4 mt-sm-0 form-group">
-                      <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip Code" data-error="Please enter your Zip Code." class="multisteps-form__input form-control" type="text" placeholder="Zip Code"/>
+                      <input id="applicant-zip" name="applicant-zip" required data-table="Applicant Zip Code" data-error="Please enter your Zip Code." class="multisteps-form__input form-control" type="number" placeholder="Zip Code"/>
                       <label for="applicant-zip">Zip Code</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -185,7 +185,7 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-phone" required data-table="Applicant Mobile/Phone num." data-error="Please enter your Phone number." name="applicant-phone" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                      <input id="applicant-phone" required data-table="Applicant Mobile/Phone num." data-error="Please enter your Phone number." name="applicant-phone" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
                       <label for="applicant-phone">Mobile/Phone Number</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -512,7 +512,7 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="parent-1-phone" required data-table="Parent 1 phone num." data-error="Please enter Phone number." name="parent-1-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
+                      <input id="parent-1-phone" required data-table="Parent 1 phone num." data-error="Please enter Phone number." name="parent-1-phone-num" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
                       <label for="parent-1-phone">Mobile/Phone Number</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -641,7 +641,7 @@
                   </div>
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="parent-2-phone" required data-table="Parent 2 mobile/phone num." data-error="Please enter Phone number." name="parent-2-phone-num" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
+                      <input id="parent-2-phone" required data-table="Parent 2 mobile/phone num." data-error="Please enter Phone number." name="parent-2-phone-num" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone Number">
                       <label for="parent-2-phone">Mobile/Phone Number</label>
                       <div class="help-block with-errors"></div>
                     </div>
@@ -805,7 +805,7 @@
                         </div>
                         <div class="form-row mt-4">
                           <div class="col-lg-6 col-sm-12 form-group">
-                            <input id="landlord-phone-number" required data-table="Landlord Mobile/Phone num." data-error="Please enter Phone number." name="landlord-phone-a" type="text" class="multisteps-form__input form-control nameF" placeholder="Mobile/Phone Number">
+                            <input id="landlord-phone-number" required data-table="Landlord Mobile/Phone num." data-error="Please enter Phone number." name="landlord-phone-a" type="tel" class="multisteps-form__input form-control nameF" placeholder="Mobile/Phone Number">
                             <label for="landlord-phone-number">Mobile/Phone number</label>
                             <div class="help-block with-errors"></div>
                           </div>
@@ -890,7 +890,7 @@
                             </div>
                             <div class="form-row mt-4">
                               <div class="col-lg-6 col-sm-12 form-group">
-                                <input id="employer-phone" required data-table="Employer Mobile/Phone num." data-error="Please enter Phone number." name="employer-phone-a" type="text" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                                <input id="employer-phone" required data-table="Employer Mobile/Phone num." data-error="Please enter Phone number." name="employer-phone-a" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
                                 <label for="employer-phone">Mobile/Phone number</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -1011,7 +1011,7 @@
                             <h5 class="card-title">Employment Dates:</h5>
                             <div class="form-row mt-4 date-from-to-row">
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-from" required data-table="Started employment at:" data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
+                                <input onclick="dateFromFunction();" id="employment-date-from" required data-table="Started employment at:"  max data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
                                 <label for="employment-date-from">Started employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -1020,7 +1020,7 @@
                                 <i class="fas fa-arrow-right"></i>
                               </div>
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-to" required data-table="Ended employment at:" data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
+                                <input id="employment-date-to" onclick="dateToFunction(); dateFromFunction();" required data-table="Ended employment at:" min  data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
                                 <label for="employment-date-to">Ended employment at</label>
                                 <div class="help-block with-errors"></div>
                               </div>

@@ -1,3 +1,4 @@
+
 $("#myForm").validator().on("submit", function(event) {
   if (event.isDefaultPrevented()) {
         console.log("error");
@@ -385,10 +386,11 @@ $('#noCheck').click(function() {
     $("#note-reason").attr("required",false);
 });
 
-////My Scripts/////
-// function addEntry2(){
-// 	$("#readroot2:last").clone().appendTo("#writeroot2");
-// }
-// function addEntry1(){
-// 	$("#readroot:last").clone().appendTo("#writeroot");
-// }
+function dateToFunction() {
+  var fromDate = $('#employment-date-from').val();
+  $('#employment-date-to').attr("min" , fromDate);
+}
+function dateFromFunction() {
+  var toDate = $('#employment-date-To').val();
+  $('#employment-date-from').attr("max" , toDate );
+}
