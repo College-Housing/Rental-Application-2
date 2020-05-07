@@ -370,19 +370,6 @@ $("#note-reason").change(function () {
 });
 
 
-// function toggleFields(){
-//       if ($("#car-select").val() === "Yes"){
-//         car
-//         // $(".car-div").slideDown();
-//         // $(".car-field").attr("required",true);
-//       }
-//
-//       else{
-//         $(".car-div").slideUp();
-//         $(".car-field").attr("required",false);
-//       }
-// }
-
 $('#yesCheck').click(function() {
     $('#ifYesCheck').slideDown();
     $("#note-reason").attr("required",true);
@@ -393,11 +380,7 @@ $('#noCheck').click(function() {
     $("#note-reason").attr("required",false);
 });
 
-function dateToFunction() {
-  var fromDate = $('#employment-date-from').val();
-  $('#employment-date-to').attr("min" , fromDate);
-}
-function dateFromFunction() {
-  var toDate = $('#employment-date-To').val();
-  $('#employment-date-from').attr("max" , toDate );
+function dateToFunction(fromDate, toDate) {
+  var fromDateVar = $('#'+fromDate).val();
+  $('#'+toDate).attr("min" , fromDateVar);
 }

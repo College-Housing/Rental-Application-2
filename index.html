@@ -922,7 +922,7 @@
                             <h5 class="card-title">Employment Dates:</h5>
                             <div class="form-row mt-4 date-from-to-row">
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input onclick="dateFromFunction();" id="employment-date-from" required data-table="Started employment at:"  max data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
+                                <input  id="employment-date-from" onchange="dateToFunction('employment-date-from', 'employment-date-to');"  required data-table="Started employment at:"  max data-error="Please enter a date." name="employment-date-from-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Started Employment at:">
                                 <label for="employment-date-from">Started</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -931,7 +931,7 @@
                                 <i class="fas fa-arrow-right"></i>
                               </div>
                               <div class="col-5 col-sm-5 mt-4 mt-sm-0 form-group">
-                                <input id="employment-date-to" onclick="dateToFunction(); dateFromFunction();" required data-table="Ended employment at:" min  data-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
+                                <input id="employment-date-to" onclick="dateToFunction('employment-date-from', 'employment-date-to');" data-min-error="End date must be after start date" required data-table="Ended employment at:" min  data-required-error="Please enter a date" name="employment-date-to-a" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Ended Employment at:">
                                 <label for="employment-date-to">Ended</label>
                                 <div class="help-block with-errors"></div>
                               </div>
