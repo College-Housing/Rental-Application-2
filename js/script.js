@@ -27,7 +27,7 @@ function submitFailed() {
 }
 
 function csubmitForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxcBdPBu-sKht-W_qPSSk9hnX7_o8hL0piBsIDz-hF9W_iBWg/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxaLqYhb2pOx44k8f2h5bRzjcKEndrid8zH0IApLyOhPurC5sY/exec'
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     // .then(response => console.log('Success!', response))
