@@ -5,6 +5,7 @@ $("#myForm").validator().on("submit", function(event) {
         submitFailed();
     } else {
         event.preventDefault();
+        setInputDate("#submitDate");
         csubmitForm();
         submitSuccess();
         console.log("Success");
@@ -384,3 +385,27 @@ function dateToFunction(fromDate, toDate) {
   var fromDateVar = $('#'+fromDate).val();
   $('#'+toDate).attr("min" , fromDateVar);
 }
+
+
+function setInputDate(_id){
+    var _dat = document.querySelector(_id);
+    var hoy = new Date(),
+        d = hoy.getDate(),
+        m = hoy.getMonth()+1,
+        y = hoy.getFullYear(),
+        t = hoy.toTimeString(),
+        data;
+
+    if(d < 10){
+        d = "0"+d;
+    };
+    if(m < 10){
+        m = "0"+m;
+    };
+
+    data = y+"-"+m+"-"+d+" ("+t+")";
+    console.log(data);
+    _dat.value = data;
+};
+
+// setInputDate("#submitDate");

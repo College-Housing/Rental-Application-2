@@ -17,8 +17,8 @@
 
 <!--PEN HEADER-->
 <header class="header">
-  <a class="navbar-brand" href="#">
-    <img src="images/logo-2.png" width="70%" alt="">
+  <a class="navbar-brand" href="https://collegehousing.us/" target="_blank">
+    <img src="images/logo-2.png" width="70%" alt="College Housing">
   </a>
 </header>
 <!--PEN CONTENT     -->
@@ -191,7 +191,7 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
-                    <div class="col-lg-6 col-sm-12 form-group">
+                    <div class="col-lg-12 col-sm-12 form-group">
                       <input id="group-lead" required data-table="Group lead name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Name">
                       <label for="group-lead">Group lead name</label>
                       <div class="help-block with-errors"></div>
@@ -214,11 +214,6 @@
                     <div class="col-lg-6 col-sm-12   form-group">
                       <input id="member-4" required data-table="Group member name (4)" data-error="Please enter the group member name" name="group-member-4" type="text" class="form-control textarea-form" placeholder="4. Group Member Name">
                       <label for="member-4">Group member name (4)</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="member-5" required data-table="Group member name (5)" data-error="Please enter the group member name" name="group-member-5" type="text" class="form-control textarea-form" placeholder="5. Group Member Name">
-                      <label for="member-5">Group member name (5)</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <p class="col-lg-12 col-sm-12" style="font-size = 1rem;">Estimated amount you are prepared to pay as a group (without utilities)</p>
@@ -1067,6 +1062,10 @@
               <div id="step-6" class="setup-content multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
                 <h4 class="multisteps-form__title">Preview Submission</h4>
                 <div class="multisteps-form__content">
+                  <div class="form-group modal-text hidden-area">
+                    <!-- <label for="name" class="col-form-label modal-text">Name:</label> -->
+                    <input type="text" id="submitDate" name="submitDate" value="" class="hidden">
+                  </div>
                   <div class="form-row mt-4">
                     <p>Are you sure you want to submit the following Information?</p>
                   </div>
