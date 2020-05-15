@@ -29,5 +29,25 @@ $(document).ready(function(){
 
   handleValLabel();
   handleLabels();
+  // addToEmails();
+  // function checkEmailDup(email) {
+  //   var filledEmail = [];
+  //   $("input[type='email']").each(function(){
+  //     // mailField.addEventListener("change", e => {
+  //       const emailVal = email.val();
+  //       const hasMail = filledEmail.find(x => x === emailVal);
+  //       if (!hasMail) {
+  //         filledEmail.push(emailVal);
+  //         return true;
+  //       }
+  //       else {
+  //         return false;
+  //       }
+  //       console.log('filled mails without duplicates', filledEmail)
+  //     // });
+  //   });
+  // }
+  // checkEmailDup();
+
 
 });

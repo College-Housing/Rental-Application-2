@@ -1,3 +1,95 @@
+// function checkEmailDup(email) {
+//   var filledEmail = [];
+//   // $("input[type='email']").each(function(){
+//     // mailField.addEventListener("change", e => {
+//       const emailVal = email.val();
+//       const hasMail = filledEmail.find(x => x === emailVal);
+//       console.log(filledEmail);
+//       if (!hasMail) {
+//         filledEmail.push(emailVal);
+//         console.log("Valid Email");
+//         return true;
+//       }
+//       else {
+//         console.log("Invalid Email");
+//
+//         return false;
+//       }
+//       console.log('filled mails without duplicates', filledEmail)
+//     // });
+//   // });
+// }
+/////////////////////////////////////////////
+// var filledEmail = [];
+// // var allEmailFields = $("form input[type='email']");
+//
+// function checkIfArrayIsUnique(myArray) {
+//   return myArray.length === new Set(myArray).size;
+// }
+//
+// function onlyUnique(value, index, self) {
+//     return self.indexOf(value) === index;
+// }
+//
+// function addToEmails(email) {
+//   // allEmailFields = $("form input[type='email']");
+//   filledEmail = [];
+//   allEmailFields.each(function(){
+//     email = $(this);
+//       filledEmail.push(email.val());
+//       console.log(filledEmail);
+//       if (checkIfArrayIsUnique(filledEmail) == true) {
+//         console.log("emails unique")
+//         return true;
+//       }
+//       else {
+//         console.log("emails not unique");
+//         filledEmail = filledEmail.filter( onlyUnique );
+//         return false;
+//       }
+//   });
+// }
+
+// $('#myForm').validator({
+//   custom: {
+//     'emaildup': function ($el) {
+//       var emailsList = [];
+//       if (jQuery.inArray( $el.val(), emailsList )) {
+//         console.log(emailsList);
+//         return false;
+//       }
+//       else {
+//         emailsList.push($el.val());
+//         console.log(emailsList);
+//         return true;
+//       }
+// }
+//   },
+//   errors: {
+//     'emaildup': "Nope"
+//   }
+// })
+
+// $('#myForm').validator({
+//   custom: {
+//     emailexist: function ($el) {
+//       if($('#'+$el.attr('id')).hasClass('email-invalid')){
+//         console.log("it is invalid")
+//         return true;
+//       }
+//       else {
+//         console.log("it is valid");
+//         return false;
+//       }
+//     }
+//
+//
+//   },
+//   errors: {
+//     emailexist: "Nope"
+//   }
+// })
+
 
 $("#myForm").validator().on("submit", function(event) {
   if (event.isDefaultPrevented()) {
@@ -27,7 +119,7 @@ function submitFailed() {
 }
 
 function csubmitForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxaLqYhb2pOx44k8f2h5bRzjcKEndrid8zH0IApLyOhPurC5sY/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz7Pd9hLTvHmCFwWI31U6_jKtLlJsN7pfKB_H8sTYzZDB1Wk1Y/exec'
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     // .then(response => console.log('Success!', response))
@@ -71,6 +163,12 @@ function toggleHasError() {
   if (isValid)
       nextStepWizard.removeAttr('disabled').trigger('click');
 }
+
+function checkCustomInvalid(){
+  return getCurrentPanel().find('.is-invalid').length == 1;
+}
+
+
 function checkRequired() {
   let allAreFilled = true;
   var activePanel= getActivePanel();
@@ -215,6 +313,7 @@ DOMstrings.stepsBar.addEventListener('click', e => {
   setActivePanel(activeStep);
 });
 
+var errorElements = [];
 //PREV/NEXT BTNS CLICK
 DOMstrings.stepsForm.addEventListener('click', e => {
 
@@ -242,12 +341,22 @@ DOMstrings.stepsForm.addEventListener('click', e => {
   } else {
     checkRequired();
     console.log("Click Next");
-    if(($("div").hasClass("has-error"))==true || checkRequired()== false){
+    if(($("div").hasClass("has-error"))==true || checkRequired()== false  || checkCustomInvalid()==true){
+      if(checkCustomInvalid()==true){
+          errorElements= [];
+          // errorElements.push($("form").find($(".has-error")));
+          errorElements.push($("form").find($(".is-invalid")));
+          $('html, body').animate({
+            scrollTop: $(errorElements[0]).offset().top -  50+ "px"
+          }, "fast");
+      }
+      // else {
 
-      $(".nextBtn").prop('disabled',false)
-      console.log("Check invalid fields");
-      var currentPanel =getCurrentPanel();
-      currentPanel.validator('validate');
+        $(".nextBtn").prop('disabled',false)
+        console.log("Check invalid fields");
+        var currentPanel =getCurrentPanel();
+        currentPanel.validator('validate');
+      // }
       // activePanel.validator('validate');
 
       // .validator('validate');

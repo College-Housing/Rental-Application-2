@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rental Application</title>
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+  <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
+  <link rel="stylesheet" href="css\bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -47,13 +50,13 @@
         <div id="steps_slider" class="row">
           <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
             <div class="multisteps-form__progress setup-panel">
-              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" disabled>Applicant Information</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" disabled>Guarantors</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Rental History" disabled>Rental History</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Employment" disabled>Employment</button>
-              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" disabled>Terms and Conditions</button>
-              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" disabled>Preview Submission</button>
-              <button id="step-7-btn" class="multisteps-form__progress-btn" type="button" title="Finished Submission" onclick="submitSuccess" style="display: none;" disabled>Finished Submission</button>
+              <button href="#step-1" class="multisteps-form__progress-btn js-active" type="button" title="Applicant Information" >Applicant Information</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Guarantors" >Guarantors</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Rental History" >Rental History</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Employment" >Employment</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Terms and Conditions" >Terms and Conditions</button>
+              <button id="step-6-btn" class="multisteps-form__progress-btn" type="button" title="Preview Submission" >Preview Submission</button>
+              <button id="step-7-btn" class="multisteps-form__progress-btn" type="button" title="Finished Submission" onclick="submitSuccess" style="display: none;" >Finished Submission</button>
 
             </div>
           </div>
@@ -61,7 +64,7 @@
         <!--form panels-->
         <div class="row">
           <div class="col-sm-12 col-lg-8 m-auto">
-            <form id="myForm" name="rental-app-form" role="form" class="multisteps-form__form" data-toggle="validator">
+            <form id="myForm" name="rental-app-form" role="form" method="POST" class="multisteps-form__form" data-toggle="validator">
             <!-- <form id="myForm" role="form" class="multisteps-form__form"> -->
 
               <!--single form panel (1)-->
@@ -70,20 +73,23 @@
                 <div class="multisteps-form__content">
                   <div class="form-row mt-4">
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-first-name" required data-table="Applicant first Name" data-error="Please enter your First Name." name="applicant-first-name" type="text" class="multisteps-form__input form-control" placeholder="First name">
-                      <label for="applicant-first-name">First Name</label>
+                      <input id="906044" required data-unique="unique" data-table="Applicant first Name" data-error="Please enter your First Name." name="applicant-first-name" type="text" class="multisteps-form__input form-control" placeholder="First name">
+                      <label for="906044">First Name</label>
                       <div class="help-block with-errors"></div>
 
                     </div>
                     <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="applicant-last-name"required data-table="Applicant last name" data-error="Please enter your Last Name." name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
-                      <label for="applicant-last-name">Last Name</label>
+                      <input id="906045" required data-table="Applicant last name" data-error="Please enter your Last Name." name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
+                      <label for="906045">Last Name</label>
                       <div class="help-block with-errors"></div>
 
                     </div>
                     <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-email" required data-table="Applicant email address" data-pattern-error="pattern error" data-required-error="Please enter a valid Email address." name="applicant-email" type="email" class="multisteps-form__input form-control" placeholder="Email address">
+                      <input id="applicant-email" required data-table="Applicant email address" data-emaildup="false" data-emailexist="email" data-emailexist-error="Enter an existant email" data-emaildup-error="You can't use the same email address more than once" data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" name="applicant-email" type="email" class="multisteps-form__input form-control"  placeholder="Email address">
                       <label for="applicant-email">Email Address</label>
+                      <div class="invalid-feedback">
+                        Please enter a real email address
+                      </div>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12    form-group">
@@ -186,8 +192,8 @@
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-12 col-sm-12 form-group">
-                      <input id="req-prop" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
-                      <label for="req-prop">Requested Property for Rent</label>
+                      <input id="906046" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
+                      <label for="906046">Requested Property for Rent</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
@@ -446,9 +452,13 @@
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12   form-group">
-                          <input id="parent-1-email" required data-table="Parent 1 Email Address" data-error="Please enter a valid Email address." name="parent-1-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                          <input id="parent-1-email" required data-table="Parent 1 Email Address" data-emailexist="email" data-emailexist-error="enter an existing email" data-emaildup="true"  data-emaildup-error="You can't use the same email address more than once" data-error="Please enter a valid Email address." name="parent-1-email" type="email"  data-pattern-error="Please enter a valid email address"
+    pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address">
                           <label for="parent-1-email">Email Address</label>
                           <div class="help-block with-errors"></div>
+                          <div class="invalid-feedback">
+                            Please enter a real email address
+                          </div>
                         </div>
                         <div class="col-lg-6 col-sm-12 form-group">
                           <input id="parent-1-place-employment" required data-table="Parent 1 place of employment" data-error="Please enter Place of employment." name="parent-1-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
@@ -565,9 +575,14 @@
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="col-lg-6 col-sm-12   form-group">
-                          <input id="parent-2-email" required data-table="Parent 2 email" data-error="Please enter a valid Email address." name="parent-2-email" type="email" class="multisteps-form__input form-control" placeholder="Email Address">
+                          <input id="parent-2-email" required data-table="Parent 2 email" data-emailexist="email" data-emailexist-error="enter an existing email" data-emaildup="false"  data-emaildup-error="You can't use the same email address more than once" data-error="Please enter a valid Email address." name="parent-2-email" type="email" data-pattern-error="Please enter a valid email address"
+    pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address">
                           <label for="parent-2-email">Email Address</label>
                           <div class="help-block with-errors"></div>
+                          <div class="invalid-feedback">
+                            Please enter a real email address
+                          </div>
+
                         </div>
                         <div class="col-lg-6 col-sm-12 form-group">
                           <input id="parent-2-place-employment" required data-table="Parent 2 place of employment" data-error="Please enter Place of employment." name="parent-2-place-of-employment" type="text" class="multisteps-form__input form-control" placeholder="Place of Employment">
@@ -719,7 +734,8 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12   form-group">
-                                <input id="landlord-email" required data-table="Landlord email address" data-error="Please enter Email address." name="landlord-email-a" type="email" class="multisteps-form__input form-control nameF" placeholder="Email address">
+                                <input id="landlord-email" required data-emailexist="email" data-emailexist-error="enter an existing email" data-table="Landlord email address" data-emaildup="false"  data-emaildup-error="You can't use the same email address more than once" data-error="Please enter Email address." name="landlord-email-a" type="email" data-pattern-error="Please enter a valid email address"
+          pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control nameF" placeholder="Email address">
                                 <label for="landlord-email">Email</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -806,7 +822,8 @@
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12   form-group">
-                                <input name="employer-email-a" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                                <input name="employer-email-a" data-table="Employer email" data-emailexist="email" data-emailexist-error="enter an existing email" data-emaildup="false"  data-emaildup-error="You can't use the same email address more than once" data-error="Please enter a valid email address" type="email" data-pattern-error="Please enter a valid email address"
+          pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
                                 <label for="employer-email">Email</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -1113,7 +1130,7 @@
   <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
   <script src="js\preview.js"></script>
   <script src="js\multipleNames.js"></script>
-
+  <script src="js/email_validation.js"></script>
 
   <!-- <script src="js\btnManager.js"></script> -->
 
