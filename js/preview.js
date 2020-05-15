@@ -192,7 +192,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12   form-group">
-                                <input id="employer-email`+generateId()+`" name="employer-email-a" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
+                                <input id="employer-email`+generateId()+`" required name="employer-email-a" data-table="Employer email" data-error="Please enter a valid email address" type="email" class="multisteps-form__input form-control" placeholder="Email Address(optional)">
                                 <label for="employer-email`+generateFor()+`">Email</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -277,12 +277,12 @@ var readrootText_2 = `<div class="readrootContainer">
                               </div>
 
                               <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="employer-add-1`+generateId()+`" required data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
+                                <textarea id="employer-add-1`+generateId()+`"  data-table="Employer address 1" data-error="Please enter your address." name="employer-add-1-a" type="text" class="form-control textarea-form" placeholder="Address 1"></textarea>
                                 <label for="employer-add-1`+generateFor()+`">Address 1</label>
                                 <div class="help-block with-errors"></div>
                               </div>
                               <div class="col-lg-6 col-sm-12   form-group">
-                                <textarea id="employer-add-2`+generateId()+`" required data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
+                                <textarea id="employer-add-2`+generateId()+`"  data-table="Employer address 2" data-error="Please enter your address." name="employer-add-2-a" type="text" class="form-control textarea-form" placeholder="Address 2"></textarea>
                                 <label for="employer-add-2`+generateFor()+`">Address 2</label>
                                 <div class="help-block with-errors"></div>
                               </div>
@@ -291,7 +291,7 @@ var readrootText_2 = `<div class="readrootContainer">
                                 <label for="your-position`+generateFor()+`">Your Position</label>
                                 <div class="help-block with-errors"></div>
                               </div>
-                              <div class="col-lg-6 col-sm-12   form-group">
+                              <div class="col-lg-6 col-sm-12 form-group">
                                 <input id="gross-salary`+generateId()+`" required data-table="Monthly gross salary" data-error="Please enter your Monthly gross salary." name="monthly-gross-salary-a" type="text" class="multisteps-form__input form-control" placeholder="Monthly Gross Salary">
                                 <label for="gross-salary`+generateFor()+`">Monthly gross salary</label>
                                 <div class="help-block with-errors"></div>
@@ -348,12 +348,14 @@ var readrootText_2 = `<div class="readrootContainer">
 
 $("#add_entry").click(function() {
   $("#writeroot").append(readrootText);
+  $("form").validator('update');
   handleLabels();
   handleValLabel();
 })
 
 $("#add_entry_2").click(function(){
   $("#writeroot2").append(readrootText_2);
+  $("form").validator('update');
   handleLabels();
   handleValLabel();
 })

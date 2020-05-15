@@ -1,95 +1,3 @@
-// function checkEmailDup(email) {
-//   var filledEmail = [];
-//   // $("input[type='email']").each(function(){
-//     // mailField.addEventListener("change", e => {
-//       const emailVal = email.val();
-//       const hasMail = filledEmail.find(x => x === emailVal);
-//       console.log(filledEmail);
-//       if (!hasMail) {
-//         filledEmail.push(emailVal);
-//         console.log("Valid Email");
-//         return true;
-//       }
-//       else {
-//         console.log("Invalid Email");
-//
-//         return false;
-//       }
-//       console.log('filled mails without duplicates', filledEmail)
-//     // });
-//   // });
-// }
-/////////////////////////////////////////////
-// var filledEmail = [];
-// // var allEmailFields = $("form input[type='email']");
-//
-// function checkIfArrayIsUnique(myArray) {
-//   return myArray.length === new Set(myArray).size;
-// }
-//
-// function onlyUnique(value, index, self) {
-//     return self.indexOf(value) === index;
-// }
-//
-// function addToEmails(email) {
-//   // allEmailFields = $("form input[type='email']");
-//   filledEmail = [];
-//   allEmailFields.each(function(){
-//     email = $(this);
-//       filledEmail.push(email.val());
-//       console.log(filledEmail);
-//       if (checkIfArrayIsUnique(filledEmail) == true) {
-//         console.log("emails unique")
-//         return true;
-//       }
-//       else {
-//         console.log("emails not unique");
-//         filledEmail = filledEmail.filter( onlyUnique );
-//         return false;
-//       }
-//   });
-// }
-
-// $('#myForm').validator({
-//   custom: {
-//     'emaildup': function ($el) {
-//       var emailsList = [];
-//       if (jQuery.inArray( $el.val(), emailsList )) {
-//         console.log(emailsList);
-//         return false;
-//       }
-//       else {
-//         emailsList.push($el.val());
-//         console.log(emailsList);
-//         return true;
-//       }
-// }
-//   },
-//   errors: {
-//     'emaildup': "Nope"
-//   }
-// })
-
-// $('#myForm').validator({
-//   custom: {
-//     emailexist: function ($el) {
-//       if($('#'+$el.attr('id')).hasClass('email-invalid')){
-//         console.log("it is invalid")
-//         return true;
-//       }
-//       else {
-//         console.log("it is valid");
-//         return false;
-//       }
-//     }
-//
-//
-//   },
-//   errors: {
-//     emailexist: "Nope"
-//   }
-// })
-
 
 $("#myForm").validator().on("submit", function(event) {
   if (event.isDefaultPrevented()) {
@@ -457,6 +365,23 @@ var otherAppend = `
 </div>
 `
 
+var ifYesAppend = `
+<div class="col form-group ifyes-div">
+  <select id="note-reason"  data-table="Reason for choosing yes?" required data-error="Please note the reason." type="text" class="multisteps-form__input form-control" name="why-don't-both-parents-sign" placeholder="Reason for choosing yes">
+    <option value="" disabled selected></option>
+    <option value="Passed away">Passed away</option>
+    <option value="Have no contact">Have no contact</option>
+    <option value="Financially independent">Financially independent</option>
+    <option value="Other">Other</option>
+  </select>
+  <label for="note-reason">If yes, please note reason:</label>
+  <div class="help-block with-errors"></div>
+  <div id="otherAppend" class="otherAppend">
+
+  </div>
+</div>
+`
+
 function toggleOther() {
   const x =$(".other-div");
   if (!($("#note-reason").val()=== "Other")) {
@@ -472,22 +397,47 @@ function toggleOther() {
     $("#Other").attr("required",true);
   }
 }
-toggleOther();
-$("#note-reason").change(function () {
-   toggleOther();
-   handleLabels();
-   handleValLabel();
-});
 
+toggleOther();
+
+function noteReasonChange() {
+
+  $("#note-reason").change(function () {
+    toggleOther();
+    handleLabels();
+    handleValLabel();
+  });
+}
+
+function unrequireParents() {
+  $("#step-2").find("input, select, textarea").each(function(){
+    var elm = $(this);
+    elm.attr('required', false);
+  })
+}
+
+function requireParents() {
+  $("#step-2").find("input, select, textarea").each(function(){
+    var elm = $(this);
+    elm.attr('required', true);
+  })
+}
 
 $('#yesCheck').click(function() {
+    $('#ifYesCheck').append(ifYesAppend);
     $('#ifYesCheck').slideDown();
+    noteReasonChange();
     $("#note-reason").attr("required",true);
+    unrequireParents();
+
 
 });
+
 $('#noCheck').click(function() {
     $('#ifYesCheck').slideUp();
+    $('.ifyes-div').detach();
     $("#note-reason").attr("required",false);
+    requireParents();
 });
 
 function dateToFunction(fromDate, toDate) {
