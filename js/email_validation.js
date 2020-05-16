@@ -79,14 +79,18 @@ function renderList(data) {
 
 $("#parent-1-email").change(function() {
 
-  var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#parent-1-email").val()+"&smtp=1&format=1";
-  $.ajax({
-    type : 'GET',
-    url :restURL,
-    dataType :'json',
-    success : renderList2,
-  });
-  return false;
+  if ($("#parent-1-email").val()!="") {
+
+    var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#parent-1-email").val()+"&smtp=1&format=1";
+    $.ajax({
+      type : 'GET',
+      url :restURL,
+      dataType :'json',
+      success : renderList2,
+    });
+    return false;
+  }
+
 });
 
 
