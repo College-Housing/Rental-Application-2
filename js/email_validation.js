@@ -36,16 +36,18 @@ document.querySelectorAll("input[type='email']").forEach((mailField,i) => {
 });
 
 $("#applicant-email").change(function() {
+  if ($("#applicant-email").val()!=""){
+    var restURL= "http://apilayer.net/api/check?access_key=0d5e011f19cf0968cec5587518aecc58&email="+$("#applicant-email").val()+"&smtp=1&format=1";
+    $.ajax({
+      type : 'GET',
+      url :restURL,
+      dataType :'json',
+      success : renderList,
 
-  var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#applicant-email").val()+"&smtp=1&format=1";
-  $.ajax({
-    type : 'GET',
-    url :restURL,
-    dataType :'json',
-    success : renderList,
+    });
+    return false;
+  }
 
-  });
-  return false;
 });
 
 
@@ -117,15 +119,17 @@ function renderList2(data) {
 }
 
 $("#parent-2-email").change(function() {
+  if ($("#parent-2-email").val()!=""){
+    var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#parent-2-email").val()+"&smtp=1&format=1";
+    $.ajax({
+      type : 'GET',
+      url :restURL,
+      dataType :'json',
+      success : renderList3,
+    });
+    return false;
 
-  var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#parent-2-email").val()+"&smtp=1&format=1";
-  $.ajax({
-    type : 'GET',
-    url :restURL,
-    dataType :'json',
-    success : renderList3,
-  });
-  return false;
+  }
 });
 
 
@@ -145,6 +149,80 @@ function renderList3(data) {
     // $("#parent-2-email").removeClass("is-valid");
     $("#parent-2-email").addClass("is-invalid");
     $("#parent-2-email").siblings(".invalid-feedback" ).html("Please enter a real email address");
+
+
+    return false;
+  }
+}
+
+$("#landlord-email").change(function() {
+  if ($("#landlord-email").val()!=""){
+    var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#landlord-email").val()+"&smtp=1&format=1";
+    $.ajax({
+      type : 'GET',
+      url :restURL,
+      dataType :'json',
+      success : renderList4,
+    });
+    return false;
+
+  }
+});
+
+
+
+function renderList4(data) {
+  if ((data.format_valid == true) && (data.smtp_check == true) ) {
+    if (!($("#landlord-email").hasClass("email-used-once"))) {
+
+      $("#landlord-email").removeClass("is-invalid");
+    // console.log("Email address is valid");
+    // $("#parent-2-email").addClass("is-valid");
+    }
+    return true;
+  }
+  else {
+    // console.log("Email address is not valid");
+    // $("#parent-2-email").removeClass("is-valid");
+    $("#landlord-email").addClass("is-invalid");
+    $("#landlord-email").siblings(".invalid-feedback" ).html("Please enter a real email address");
+
+
+    return false;
+  }
+}
+
+$("#employer-email").change(function() {
+  if ($("#employer-email").val()!=""){
+    var restURL= "http://apilayer.net/api/check?access_key=9602c92a17b0e0b7dcf8436c3a53e836&email="+$("#employer-email").val()+"&smtp=1&format=1";
+    $.ajax({
+      type : 'GET',
+      url :restURL,
+      dataType :'json',
+      success : renderList5,
+    });
+    return false;
+
+  }
+});
+
+
+
+function renderList5(data) {
+  if ((data.format_valid == true) && (data.smtp_check == true) ) {
+    if (!($("#employer-email").hasClass("email-used-once"))) {
+
+      $("#employer-email").removeClass("is-invalid");
+    // console.log("Email address is valid");
+    // $("#parent-2-email").addClass("is-valid");
+    }
+    return true;
+  }
+  else {
+    // console.log("Email address is not valid");
+    // $("#parent-2-email").removeClass("is-valid");
+    $("#employer-email").addClass("is-invalid");
+    $("#employer-email").siblings(".invalid-feedback" ).html("Please enter a real email address");
 
 
     return false;

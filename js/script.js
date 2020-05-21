@@ -1,8 +1,15 @@
 
 $("#myForm").validator().on("submit", function(event) {
   if (event.isDefaultPrevented()) {
+
+        // var oldEPD = Event.prototype.preventDefault;
+        // Event.prototype.preventDefault = function() {
+        //   debugger;
+        //   oldEPD.call(this);
+        // };
+
         console.log("error");
-        submitFailed();
+        // submitFailed();
     } else {
         event.preventDefault();
         setInputDate("#submitDate");
@@ -27,7 +34,7 @@ function submitFailed() {
 }
 
 function csubmitForm() {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzfvyhgU32KgGQr2uMLhC__jG7zqJ2jgoJdUO0_v3T15NU_KDU/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz7Pd9hLTvHmCFwWI31U6_jKtLlJsN7pfKB_H8sTYzZDB1Wk1Y/exec'
   const form = document.forms['rental-app-form']
   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     // .then(response => console.log('Success!', response))
@@ -242,13 +249,13 @@ DOMstrings.stepsForm.addEventListener('click', e => {
 
   //set active step and active panel onclick
   if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
-    console.log("Click Prev");
+    // console.log("Click Prev");
     activePanelNum--;
     window.scroll(0, 265);
 
   } else {
     checkRequired();
-    console.log("Click Next");
+    // console.log("Click Next");
     if(($("div").hasClass("has-error"))==true || checkRequired()== false  || checkCustomInvalid()==true){
       if(checkCustomInvalid()==true){
           errorElements= [];
@@ -261,8 +268,9 @@ DOMstrings.stepsForm.addEventListener('click', e => {
       // else {
 
         $(".nextBtn").prop('disabled',false)
-        console.log("Check invalid fields");
+        // console.log("Check invalid fields");
         var currentPanel =getCurrentPanel();
+        currentPanel.validator('update');
         currentPanel.validator('validate');
       // }
       // activePanel.validator('validate');
@@ -270,7 +278,7 @@ DOMstrings.stepsForm.addEventListener('click', e => {
       // .validator('validate');
     }
     else {
-      console.log("Click next");
+      // console.log("Click next");
       activePanelNum++;
       window.scroll(0, 265);
 
@@ -300,22 +308,22 @@ const setAnimationType = newType => {
 
 
 var carFields = `
-  <div class="col-lg-6 col-sm-12 car-div form-group" style="display: none;">
+  <div class="col-lg-6 col-sm-12 car-div form-group" >
     <input required id="car-make" data-table="Car Make" data-error="Please fill out this field." name="car-make" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Make">
     <label for="car-make">Car Make</label>
     <div class="help-block with-errors"></div>
   </div>
-  <div class="col-lg-6 col-sm-12 car-div form-group" style="display: none;">
+  <div class="col-lg-6 col-sm-12 car-div form-group" >
     <input  required id="car-model" data-table="Car Model" data-error="Please fill out this field." name="car-model" type="text" class="car-field multisteps-form__input form-control" placeholder="Car Model">
     <label for="car-model">Car Model</label>
     <div class="help-block with-errors"></div>
   </div>
-  <div class="col-lg-6 col-sm-12 car-div form-group" style="display: none;">
+  <div class="col-lg-6 col-sm-12 car-div form-group" >
     <input  required id="license-plate" data-table="Car license plate number"  data-error="Please fill out this field." name="license-plate-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Car License Plate Number">
     <label for="license-plate">Car license plate number</label>
     <div class="help-block with-errors"></div>
   </div>
-  <div class="col-lg-6 col-sm-12 car-div form-group" style="display: none;">
+  <div class="col-lg-6 col-sm-12 car-div form-group" >
     <input  required id="driver-license" data-table="Drivers license number" data-error="Please fill out this field." name="driver-license-num" type="text" class="car-field multisteps-form__input form-control" placeholder="Drivers License Number">
     <label for="driver-license">Drivers license number</label>
     <div class="help-block with-errors"></div>
@@ -335,7 +343,7 @@ var carFields = `
 function toggleFields() {
     const x = $(".car-div");
     if (!($("#car-select").val() === "Yes")){
-      $(".car-div").slideUp();
+      $("#ifYesCar").slideUp();
       $(".car-div").detach();
       var currentPanel =getCurrentPanel();
       currentPanel.validator('update');
@@ -347,10 +355,11 @@ function toggleFields() {
 
     else{
       // $("#car_fields").next(carFields);
-      $(carFields).insertAfter($("#car_fields"));
+      // $(carFields).insertAfter($("#car_fields"));
+      $("#ifYesCar").append(carFields);
+      $("#ifYesCar").slideDown();
       var currentPanel =getCurrentPanel();
       currentPanel.validator('update');
-      $(".car-div").slideDown();
       $(".car-field").attr("required",true);
     }
 }
@@ -367,8 +376,8 @@ var otherAppend = `
 
 var ifYesAppend = `
 <div class="col form-group ifyes-div">
-  <select id="note-reason"  data-table="Reason for choosing yes?" required data-error="Please note the reason." type="text" class="multisteps-form__input form-control" name="why-don't-both-parents-sign" placeholder="Reason for choosing yes">
-    <option value="" disabled selected></option>
+  <select required id="note-reason"  data-table="Reason for choosing yes?" data-error="Please note the reason." type="text" class="multisteps-form__input form-control" name="why-don't-both-parents-sign" placeholder="Reason for choosing yes">
+    <option value="" disabled selected hidden></option>
     <option value="Passed away">Passed away</option>
     <option value="Have no contact">Have no contact</option>
     <option value="Financially independent">Financially independent</option>
@@ -410,7 +419,7 @@ function noteReasonChange() {
 }
 
 function unrequireParents() {
-  $("#step-2").find("input, select, textarea").each(function(){
+  $("#step-2").find("input, select.state, textarea").each(function(){
     var elm = $(this);
     elm.attr('required', false);
   })
@@ -419,7 +428,7 @@ function unrequireParents() {
 }
 
 function requireParents() {
-  $("#step-2").find("input, select, textarea").each(function(){
+  $("#step-2").find("input, select.state, textarea").each(function(){
     var elm = $(this);
     elm.attr('required', true);
   })
@@ -428,9 +437,17 @@ function requireParents() {
 $('#yesCheck').click(function() {
     $('#ifYesCheck').append(ifYesAppend);
     $('#ifYesCheck').slideDown();
+    $("#note-reason").attr('required',true);
+    $("form").validator('update');
+
+    // $("#step-2").find($("#note-reason")).each(function(){
+    //   var elm = $(this);
+    //   elm.attr('required', true);
+    // })
     noteReasonChange();
-    $("#note-reason").attr("required",true);
+    // $("#note-reason").attr("required",true);
     unrequireParents();
+
 
 
 });
@@ -439,6 +456,7 @@ $('#noCheck').click(function() {
     $('#ifYesCheck').slideUp();
     $('.ifyes-div').detach();
     $("#note-reason").attr("required",false);
+    $("form").validator('update');
     requireParents();
 });
 
@@ -465,7 +483,7 @@ function setInputDate(_id){
     };
 
     data = y+"-"+m+"-"+d+" ("+t+")";
-    console.log(data);
+    // console.log(data);
     _dat.value = data;
 };
 

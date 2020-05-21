@@ -18,36 +18,63 @@ function handleValLabel() {
 
 }
 
+function generateUniqID () {
+  // Math.random should be unique because of its seeding algorithm.
+  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
+  // after the decimal.
+  return Math.random().toString(36).substr(2, 9);
+}
+function IDGenerator() {
+
+  this.length = 8;
+  this.timestamp = +new Date;
+
+  var _getRandomInt = function( min, max ) {
+   return Math.floor( Math.random() * ( max - min + 1 ) ) + min;
+  }
+
+  this.generate = function() {
+    var ts = this.timestamp.toString();
+    var parts = ts.split( "" ).reverse();
+    var id = "";
+
+    for( var i = 0; i < this.length; ++i ) {
+     var index = _getRandomInt( 0, parts.length - 1 );
+     id += parts[index];
+    }
+
+    return id;
+  }
+
+
+}
+
+
+// document.addEventListener( "DOMContentLoaded", function() {
+//  var btn = document.querySelector( "#generate" ),
+//    output = document.querySelector( "#output" );
+//
+//  btn.addEventListener( "click", function() {
+//    var generator = new IDGenerator();
+//    output.innerHTML = generator.generate();
+//
+//  }, false);
+//
+// });
+
 $(document).ready(function(){
-
-  // $("form input[type='text'], form input[type='email'], form input[type='number'], form input[type='checkbox'], form select, form textarea, form input[type='radio']:checked").each(
-  //   function(index){
-  //     var input = $(this);
-  //     input.attr('placeholder').hide();
-  // );
-  // )
-
+  var generator = new IDGenerator();
+  // output.innerHTML = generator.generate();
   handleValLabel();
   handleLabels();
-  // addToEmails();
-  // function checkEmailDup(email) {
-  //   var filledEmail = [];
-  //   $("input[type='email']").each(function(){
-  //     // mailField.addEventListener("change", e => {
-  //       const emailVal = email.val();
-  //       const hasMail = filledEmail.find(x => x === emailVal);
-  //       if (!hasMail) {
-  //         filledEmail.push(emailVal);
-  //         return true;
-  //       }
-  //       else {
-  //         return false;
-  //       }
-  //       console.log('filled mails without duplicates', filledEmail)
-  //     // });
-  //   });
-  // }
-  // checkEmailDup();
+  $("input").keydown(function(event){
+    if(event.keyCode == 13) {
+      // console.log("Enter");
+      event.preventDefault();
+      return false;
+    }
+  });
+  $("#uniqueID").val(generator.generate());
 
 
 });

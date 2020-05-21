@@ -204,6 +204,10 @@ textarea:-webkit-autofill:active  {
     /* text-indent: 0; */
     font-size: 0.5rem;
   }
+
+  #prevTable{
+    font-size: 0.8rem;
+  }
 }
 .multisteps-form__progress-btn:before {
   position: absolute;
@@ -402,4 +406,9 @@ input:-webkit-autofill:hover{
 .sub-text{
   font-size: 0.9rem;
   color: grey;
+}
+
+#prevTable{
+  table-layout: fixed !important;
+  word-wrap: break-word !important;
 }
