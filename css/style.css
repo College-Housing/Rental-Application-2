@@ -20,6 +20,7 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
   color: #2c2c2c;
+  /* position: fixed; */
 }
 body a {
   color: inherit;
@@ -148,19 +149,20 @@ textarea:-webkit-autofill:active  {
 }
 
 .content {
+  padding-top: 5em;
   width: 95%;
   margin: 0 auto 50px;
 }
 
 .content__title-lg {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
 }
 
 .content__title-sm{
   margin-bottom: 40px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -411,4 +413,111 @@ input:-webkit-autofill:hover{
 #prevTable{
   table-layout: fixed !important;
   word-wrap: break-word !important;
+}
+
+
+.Logo-image{
+  /* border-right: black;
+    border-right-style: solid; */
+    /* margin-right: 1rem;
+    padding-right: 1rem; */
+    /* border-right-width: 1px; */
+    width: 11em;
+}
+/*
+.header-span{
+  color: #78726d;
+  font-size: 1rem;
+}
+*/
+.navbar{
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    line-height: 2.5rem;
+}
+
+.nav-text{
+  color: #78726D !important;
+    border-left: #78726D ;
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+.nav-text-2{
+  color: #78726D !important;
+
+}
+
+.footer {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #3185EA;
+   color: white;
+   text-align: center;
+   height: 3.4rem;
+}
+
+.footer-container{
+  background-color: #3185EA;
+  padding-top: 1rem;
+  text-align: left;
+  padding-left: 3rem;
+  width: 100%;
+  float: left;
+}
+
+.footer-text{
+  width: 70%;
+  float: left;
+  text-align: left;
+}
+
+.footer-icons{
+  width: 20%;
+  float: left;
+  text-align: left;
+}
+
+.field-icon{
+  float: right;
+margin-left: -20px;
+margin-right: 10px;
+margin-top: -27px;
+position: relative;
+z-index: 2;
+color: grey;
+cursor: pointer;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+  .nav-text{
+    display: none;
+  }
+  .footer {
+    height: 4.5rem;
+  }
+  .footer-text {
+    padding-left: 0rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+  }
+  .footer-container{
+    padding-left: 0px;
+  }
+  .footer-icons {
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+
+  }
+  body{
+    position: absolute;
+    overflow-x: hidden;
+
+  }
+
 }

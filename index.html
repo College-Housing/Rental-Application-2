@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rental Application</title>
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
   <!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
@@ -18,12 +18,44 @@
 <!-- partial:index.partial.html -->
 
 <!--PEN HEADER-->
-<header class="header">
-  <a class="navbar-brand" href="https://collegehousing.us/" target="_blank">
+<!-- <header class="header"> -->
+  <!-- <a class="navbar-brand" href="https://collegehousing.us/" target="_blank">
     <img src="images/logo-2.png" width="70%" alt="College Housing">
-  </a>
-</header>
+  </a> -->
+<!-- </header> -->
 <!--PEN CONTENT     -->
+<!-- <nav class="navbar navbar-expand-lg navbar-dark navbar-custom  row"> -->
+  <!-- <div class="row"> -->
+  <!-- <div class="col-lg-3"><a class="navbar-brand logo-image nav-link" onclick="openTab(event, 'Home-Tab')"><img src="images/logo-2.png" alt="alternative"></a></div>
+  <div class="header-text col-lg-3">Rental Applicaton</div> -->
+
+  <!-- </div> -->
+
+ <!-- end of navbar -->
+ <!-- <nav class="navbar navbar-light">
+  <a class="navbar-brand" href="#">
+    <img src="images/logo-2.png" class="d-inline-block align-top Logo-image" alt="">
+    <span class="header-span">Rental Application</span>
+  </a>
+</nav> -->
+
+<nav class="navbar navbar-expand navbar-light">
+      <a class="navbar-brand" href="https://collegehousing.us/new/rental-application/#smooth-scroll-top" target="_blank"><img src="images/logo-2.png" class="d-inline-block align-top Logo-image" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto nav-text">
+          <li class="nav-item">
+            <a class="nav-link" href="https://collegehousing.us/new/rental-application/#smooth-scroll-top" target="_blank">Rental Application</a>
+          </li>
+        </ul>
+        <!-- <a class="nav-link my-2 my-md-0 nav-text-2"  href="#">
+          Contact Us
+        </a> -->
+      </div>
+    </nav>
 <div class="content">
   <!--content inner-->
   <div class="content__inner">
@@ -77,7 +109,16 @@
                       <input id="906045" required data-table="Applicant last name" data-error="Please enter your Last Name." name="applicant-last-name" type="text" class="multisteps-form__input form-control" placeholder="Last name">
                       <label for="906045">Last Name</label>
                       <div class="help-block with-errors"></div>
-
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <select id="gender" name="applicant-gender" placeholder="gender" required data-table="Applicant gender" data-error="Please select your gender" class="multisteps-form__select form-control">
+                        <option value="" disabled selected ></option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                      </select>
+                      <label for="gender">Gender</label>
+                      <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 form-group">
                       <input id="applicant-email" required data-table="Applicant email address"  data-pattern-error="Please enter a valid email address" data-required-error="Please enter an Email address." pattern="^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:[a-zA-Z]{2}|aero|asia|biz|cat|com|coop|edu|gov|info|int|jobs|mil|mobi|museum|name|net|org|pro|tel|travel)$" name="applicant-email" type="email" class="multisteps-form__input form-control"  placeholder="Email address">
@@ -90,6 +131,47 @@
                     <div class="col-lg-6 col-sm-12    form-group">
                       <input id="applicant-birthdate" required data-table="Applicant birthdate" max="2010-12-31" data-error="Please enter your Birthdate." name="applicant-birthdate" type="text" class="multisteps-form__input form-control" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}" placeholder="Birthdate">
                       <label for="applicant-birthdate">Birthdate</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <input id="applicant-phone" required data-table="Applicant Mobile/Phone num." data-error="Please enter your Phone number." name="applicant-phone" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
+                      <label for="applicant-phone">Mobile/Phone Number</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12   form-group">
+                      <input id="applicant-ssn" required data-table="Applicant SSN" data-error="Please enter your SSN." name="applicant-ssn" type="password" class="multisteps-form__input form-control" data-pattern-error="Please enter a valid SSN" maxlength="11" pattern="(?:\d{3})-(?:\d{2})-(\d{4})" placeholder="Enter SSN" onkeydown="ssnValidation()">
+                      <span toggle="#applicant-ssn" class="fas fa-eye field-icon toggle-ssn"></span>
+                      <!-- <i id="showSSN" class="fas fa-eye"></i> -->
+                      <label for="applicant-ssn">SSN</label>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12 form-group">
+                      <select id="906046" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
+                        <option value="" disabled selected ></option>
+                        <option value="4603 Knox Road">4603 Knox Road</option>
+                        <option value="4609 Knox Road">4609 Knox Road</option>
+                        <option value="4611 Knox Road">4611 Knox Road</option>
+                        <option value="4613 Knox Road">4613 Knox Road</option>
+                        <option value="4613 1/2 Knox Road">4613 1/2 Knox Road</option>
+                        <option value="4708 Norwich Road">4708 Norwich Road</option>
+                        <option value="4711 Norwich Road">4711 Norwich Road</option>
+                        <option value="7307 Hopkins Ave">7307 Hopkins Ave</option>
+                        <option value="7309 Hopkins Ave">7309 Hopkins Ave</option>
+                        <option value="7309 Hopkins Ave Apt">7309 Hopkins Ave Apt</option>
+                        <option value="7310 Hokins Ave">7310 Hokins Ave</option>
+                        <option value="7504 Hokins Ave">7504 Hokins Ave</option>
+                        <option value="4620 College Ave">4620 College Ave</option>
+                        <option value="4610 Calvert Road">4610 Calvert Road</option>
+                        <option value="4504 Guilford Road A">4504 Guilford Road A</option>
+                        <option value="4504 Guilford Road B">4504 Guilford Road B</option>
+                        <option value="4504 Guilford Road C">4504 Guilford Road C</option>
+                        <option value="468111 / 51 Ave">8111 / 51 Ave</option>
+                        <option value="6805 Baltimore Ave">6805 Baltimore Ave</option>
+                        <option value="8817 Patricia Ct">8817 Patricia Ct</option>
+                        <option value="7211 Dartmouth Ave">4611 Knox Road</option>
+
+                      </select>
+                      <label for="906046">Requested Property for Rent</label>
                       <div class="help-block with-errors"></div>
                     </div>
                     <div class="col-lg-6 col-sm-12 form-group">
@@ -176,21 +258,7 @@
                       <label for="applicant-add-2">Address 2</label>
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-lg-6 col-sm-12 form-group">
-                      <input id="applicant-phone" required data-table="Applicant Mobile/Phone num." data-error="Please enter your Phone number." name="applicant-phone" type="tel" class="multisteps-form__input form-control" placeholder="Mobile/Phone number">
-                      <label for="applicant-phone">Mobile/Phone Number</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-6 col-sm-12   form-group">
-                      <input id="applicant-ssn" required data-table="Applicant SSN" data-error="Please enter your SSN." name="applicant-ssn" type="text" class="multisteps-form__input form-control" placeholder="Enter SSN">
-                      <label for="applicant-ssn">SSN</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="col-lg-12 col-sm-12 form-group">
-                      <input id="906046" required data-table="Requested property" data-error="Please enter the requested property for rent." name="req-property" type="text" class="multisteps-form__input form-control" placeholder="Requested Property For Rent">
-                      <label for="906046">Requested Property for Rent</label>
-                      <div class="help-block with-errors"></div>
-                    </div>
+
                     <h5 class="col-lg-12 col-sm-12 card-title">Group Members:</h5>
                     <div class="col-lg-12 col-sm-12 form-group">
                       <input id="group-lead" required data-table="Group lead name" data-error="Please enter your group Lead name." name="group-lead" type="text" class="multisteps-form__input form-control" placeholder="Group Lead Name">
@@ -256,10 +324,74 @@
                       <label for="gpa">GPA</label>
                       <div class="help-block with-errors"></div>
                     </div>
-                    <div class="col-lg-12 col-sm-12 form-group">
-                      <input id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
-                      <label for="loc-affiliations">Local Affiliations</label>
-                      <div class="help-block with-errors"></div>
+                    <div class="col-lg-12 col-sm-12 form-group chapter-div">
+                      <div class="chapter-content">
+                        <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                          <option value="" disabled selected hidden></option>
+                          <option value="Alpha Delta Phi (IFC)">Alpha Delta Phi (IFC)</option>
+                          <option value="Alpha Epsilon Pi (IFC)">Alpha Epsilon Pi (IFC)</option>
+                          <option value="Alpha Phi Alpha Fraternity, Inc. (NPHC)">Alpha Phi Alpha Fraternity, Inc. (NPHC)</option>
+                          <option value="Alpha Sigma Phi (IFC)">Alpha Sigma Phi (IFC)</option>
+                          <option value="Alpha Tau Omega (IFC)">Alpha Tau Omega (IFC)</option>
+                          <option value="Beta Theta Pi (IFC)">Beta Theta Pi (IFC)</option>
+                          <option value="Chi Phi (IFC)">Chi Phi (IFC)</option>
+                          <option value="Delta Sigma Phi (IFC)">Delta Sigma Phi (IFC)</option>
+                          <option value="Delta Upsilon (IFC)">Delta Upsilon (IFC)</option>
+                          <option value="Iota Nu Delta Fraternity, Inc. (MGC)">Iota Nu Delta Fraternity, Inc. (MGC)</option>
+                          <option value="Kappa Alpha Order (IFC)">Kappa Alpha Order (IFC)</option>
+                          <option value="Kappa Alpha Psi Fraternity, Inc. (NPHC)">Kappa Alpha Psi Fraternity, Inc. (NPHC)</option>
+                          <option value="Lambda Chi Alpha (IFC)">Lambda Chi Alpha (IFC)</option>
+                          <option value="Lambda Upsilon Lambda Fraternity, Inc. (MGC)">Lambda Upsilon Lambda Fraternity, Inc. (MGC)</option>
+                          <option value="Phi Delta Sigma Fraternity, Inc. (MGC)">Phi Delta Sigma Fraternity, Inc. (MGC)</option>
+                          <option value="Phi Delta Theta (IFC)">Phi Delta Theta (IFC)</option>
+                          <option value="Phi Kappa Psi (IFC)">Phi Kappa Psi (IFC)</option>
+                          <option value="Phi Kappa Tau (IFC)">Phi Kappa Tau (IFC)</option>
+                          <option value="Phi Sigma Kappa (IFC)">Phi Sigma Kappa (IFC)</option>
+                          <option value="Pi Kappa Alpha (IFC)">Pi Kappa Alpha (IFC)</option>
+                          <option value="Sigma Alpha Epsilon (IFC)">Sigma Alpha Epsilon (IFC)</option>
+                          <option value="Sigma Alpha Mu (IFC)">Sigma Alpha Mu (IFC)</option>
+                          <option value="Sigma Chi (IFC)">Sigma Chi (IFC)</option>
+                          <option value="Sigma Nu (IFC)">Sigma Nu (IFC)</option>
+                          <option value="Sigma Phi Epsilon (IFC)">Sigma Phi Epsilon (IFC)</option>
+                          <option value="Tau Epsilon Phi (IFC)">Tau Epsilon Phi (IFC)</option>
+                          <option value="Theta Chi (IFC)">Theta Chi (IFC)</option>
+                          <option value="Zeta Beta Tau (IFC)">Zeta Beta Tau (IFC)</option>
+                          <option value="Zeta Psi (IFC)">Zeta Psi (IFC)</option>
+                          <option value="Alpha Chi Omega (PHA)">Alpha Chi Omega (PHA)</option>
+                          <option value="Alpha Delta Pi (PHA)">Alpha Delta Pi (PHA)</option>
+                          <option value="Alpha Epsilon Phi (PHA)">Alpha Epsilon Phi (PHA)</option>
+                          <option value="Alpha Kappa Alpha Sorority, Inc. (NPHC)">Alpha Kappa Alpha Sorority, Inc. (NPHC)</option>
+                          <option value="Alpha Omicron Pi (PHA)">Alpha Omicron Pi (PHA)</option>
+                          <option value="Alpha Phi (PHA)">Alpha Phi (PHA)</option>
+                          <option value="Alpha Xi Delta (PHA)">Alpha Xi Delta (PHA)</option>
+                          <option value="Delta Delta Delta (PHA)">Delta Delta Delta (PHA)</option>
+                          <option value="Delta Gamma (PHA)">Delta Gamma (PHA)</option>
+                          <option value="Delta Phi Epsilon (PHA)">Delta Phi Epsilon (PHA)</option>
+                          <option value="Delta Sigma Theta Sorority, Inc. (NPHC)">Delta Sigma Theta Sorority, Inc. (NPHC)</option>
+                          <option value="Gamma Phi Beta (PHA)">Gamma Phi Beta (PHA)</option>
+                          <option value="Hermandad de Sigma Iota Alpha, Inc. (MGC)">Hermandad de Sigma Iota Alpha, Inc. (MGC)</option>
+                          <option value="Kappa Alpha Theta (PHA)">Kappa Alpha Theta (PHA)</option>
+                          <option value="Kappa Delta (PHA)">Kappa Delta (PHA)</option>
+                          <option value="Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)">Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)</option>
+                          <option value="Kappa Phi Lambda Sorority, Inc. (MGC)">Kappa Phi Lambda Sorority, Inc. (MGC)</option>
+                          <option value="Lambda Theta Alpha Latin Sorority, Inc. (MGC)">Lambda Theta Alpha Latin Sorority, Inc. (MGC)</option>
+                          <option value="Phi Sigma Sigma (PHA)">Phi Sigma Sigma (PHA)</option>
+                          <option value="Sigma Delta Tau (PHA)">Sigma Delta Tau (PHA)</option>
+                          <option value="Sigma Kappa (PHA)">Sigma Kappa (PHA)</option>
+                          <option value="Sigma Psi Zeta Sorority, Inc. (MGC)">Sigma Psi Zeta Sorority, Inc. (MGC)</option>
+                          <option value="Zeta Tau Alpha (PHA)">Zeta Tau Alpha (PHA)</option>
+                          <option value="alpha Kappa Delta Phi Sorority, Inc. (MGC)">alpha Kappa Delta Phi Sorority, Inc. (MGC)</option>
+                          <option value="N/A">N/A</option>
+                        </select>
+                        <label for="loc-affiliations">Chapters</label>
+                        <div class="help-block with-errors"></div>
+                      </div>
+                      <!-- <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+                        <option value="" disabled selected hidden></option>
+                      </select>
+                      <label for="loc-affiliations">Chapters</label>
+                      <div class="help-block with-errors"></div> -->
+
                     </div>
                     <div class="col-lg-12 col-sm-12 form-group">
                       <select id="payment-schedule" required name="payment-schedule" data-table="Preferred payment schedule" data-error="Please select an answer" placeholder="Preferred Payment Schedule" type="text" class="multisteps-form__input form-control">
@@ -1117,6 +1249,20 @@
     </div>
   </div>
 </div>
+<!-- <div id="footer" class="footer">
+  <div class="footer-container">
+    <div class="footer-text">
+      <span style="padding-right:1.5rem;">© 2020 </span>
+      <span> College Housing LLC. All Rights Reserved.</span>
+    </div>
+    <div class="footer-icons">
+      <span class="follow-us" style="padding-right:1.5rem; font-size:12px;"> FOLLOW US</span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.facebook.com/collegehousingllc/" target="_blank"><i class="fa fa-facebook fa-1x" style="color:#fff;"></i></a></span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.linkedin.com/company/college-housing-llc/about/" target="_blank"><i class="fa fa-linkedin fa-1x" style="color:#fff;"></i></a></span>
+      <span class="social-icon" style="padding-right:1.5rem; "><a href="https://www.instagram.com/college_housing/?hl=en" target="_blank"><i class="fa fa-instagram fa-1x" style="color:#fff;"></i></a></span>
+    </div>
+  </div>
+</div> -->
 <!-- partial -->
   <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script> -->
@@ -1125,7 +1271,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
   <script src="js\floatingLabels.js"></script>
   <script  src="js/script.js"></script>
-  <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  <script src="js/bootstrap.min.js"></script>
   <script src="js\preview.js"></script>
   <script src="js\multipleNames.js"></script>
   <script src="js/email_validation.js"></script>

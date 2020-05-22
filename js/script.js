@@ -250,6 +250,7 @@ DOMstrings.stepsForm.addEventListener('click', e => {
   //set active step and active panel onclick
   if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
     // console.log("Click Prev");
+    $("form").validator('reset');
     activePanelNum--;
     window.scroll(0, 265);
 
@@ -459,6 +460,173 @@ $('#noCheck').click(function() {
     $("form").validator('update');
     requireParents();
 });
+
+var chapters=`
+<div class="chapter-content">
+  <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+    <option value="" disabled selected hidden></option>
+    <option value="Alpha Delta Phi (IFC)">Alpha Delta Phi (IFC)</option>
+    <option value="Alpha Epsilon Pi (IFC)">Alpha Epsilon Pi (IFC)</option>
+    <option value="Alpha Phi Alpha Fraternity, Inc. (NPHC)">Alpha Phi Alpha Fraternity, Inc. (NPHC)</option>
+    <option value="Alpha Sigma Phi (IFC)">Alpha Sigma Phi (IFC)</option>
+    <option value="Alpha Tau Omega (IFC)">Alpha Tau Omega (IFC)</option>
+    <option value="Beta Theta Pi (IFC)">Beta Theta Pi (IFC)</option>
+    <option value="Chi Phi (IFC)">Chi Phi (IFC)</option>
+    <option value="Delta Sigma Phi (IFC)">Delta Sigma Phi (IFC)</option>
+    <option value="Delta Upsilon (IFC)">Delta Upsilon (IFC)</option>
+    <option value="Iota Nu Delta Fraternity, Inc. (MGC)">Iota Nu Delta Fraternity, Inc. (MGC)</option>
+    <option value="Kappa Alpha Order (IFC)">Kappa Alpha Order (IFC)</option>
+    <option value="Kappa Alpha Psi Fraternity, Inc. (NPHC)">Kappa Alpha Psi Fraternity, Inc. (NPHC)</option>
+    <option value="Lambda Chi Alpha (IFC)">Lambda Chi Alpha (IFC)</option>
+    <option value="Lambda Upsilon Lambda Fraternity, Inc. (MGC)">Lambda Upsilon Lambda Fraternity, Inc. (MGC)</option>
+    <option value="Phi Delta Sigma Fraternity, Inc. (MGC)">Phi Delta Sigma Fraternity, Inc. (MGC)</option>
+    <option value="Phi Delta Theta (IFC)">Phi Delta Theta (IFC)</option>
+    <option value="Phi Kappa Psi (IFC)">Phi Kappa Psi (IFC)</option>
+    <option value="Phi Kappa Tau (IFC)">Phi Kappa Tau (IFC)</option>
+    <option value="Phi Sigma Kappa (IFC)">Phi Sigma Kappa (IFC)</option>
+    <option value="Pi Kappa Alpha (IFC)">Pi Kappa Alpha (IFC)</option>
+    <option value="Sigma Alpha Epsilon (IFC)">Sigma Alpha Epsilon (IFC)</option>
+    <option value="Sigma Alpha Mu (IFC)">Sigma Alpha Mu (IFC)</option>
+    <option value="Sigma Chi (IFC)">Sigma Chi (IFC)</option>
+    <option value="Sigma Nu (IFC)">Sigma Nu (IFC)</option>
+    <option value="Sigma Phi Epsilon (IFC)">Sigma Phi Epsilon (IFC)</option>
+    <option value="Tau Epsilon Phi (IFC)">Tau Epsilon Phi (IFC)</option>
+    <option value="Theta Chi (IFC)">Theta Chi (IFC)</option>
+    <option value="Zeta Beta Tau (IFC)">Zeta Beta Tau (IFC)</option>
+    <option value="Zeta Psi (IFC)">Zeta Psi (IFC)</option>
+    <option value="Alpha Chi Omega (PHA)">Alpha Chi Omega (PHA)</option>
+    <option value="Alpha Delta Pi (PHA)">Alpha Delta Pi (PHA)</option>
+    <option value="Alpha Epsilon Phi (PHA)">Alpha Epsilon Phi (PHA)</option>
+    <option value="Alpha Kappa Alpha Sorority, Inc. (NPHC)">Alpha Kappa Alpha Sorority, Inc. (NPHC)</option>
+    <option value="Alpha Omicron Pi (PHA)">Alpha Omicron Pi (PHA)</option>
+    <option value="Alpha Phi (PHA)">Alpha Phi (PHA)</option>
+    <option value="Alpha Xi Delta (PHA)">Alpha Xi Delta (PHA)</option>
+    <option value="Delta Delta Delta (PHA)">Delta Delta Delta (PHA)</option>
+    <option value="Delta Gamma (PHA)">Delta Gamma (PHA)</option>
+    <option value="Delta Phi Epsilon (PHA)">Delta Phi Epsilon (PHA)</option>
+    <option value="Delta Sigma Theta Sorority, Inc. (NPHC)">Delta Sigma Theta Sorority, Inc. (NPHC)</option>
+    <option value="Gamma Phi Beta (PHA)">Gamma Phi Beta (PHA)</option>
+    <option value="Hermandad de Sigma Iota Alpha, Inc. (MGC)">Hermandad de Sigma Iota Alpha, Inc. (MGC)</option>
+    <option value="Kappa Alpha Theta (PHA)">Kappa Alpha Theta (PHA)</option>
+    <option value="Kappa Delta (PHA)">Kappa Delta (PHA)</option>
+    <option value="Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)">Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)</option>
+    <option value="Kappa Phi Lambda Sorority, Inc. (MGC)">Kappa Phi Lambda Sorority, Inc. (MGC)</option>
+    <option value="Lambda Theta Alpha Latin Sorority, Inc. (MGC)">Lambda Theta Alpha Latin Sorority, Inc. (MGC)</option>
+    <option value="Phi Sigma Sigma (PHA)">Phi Sigma Sigma (PHA)</option>
+    <option value="Sigma Delta Tau (PHA)">Sigma Delta Tau (PHA)</option>
+    <option value="Sigma Kappa (PHA)">Sigma Kappa (PHA)</option>
+    <option value="Sigma Psi Zeta Sorority, Inc. (MGC)">Sigma Psi Zeta Sorority, Inc. (MGC)</option>
+    <option value="Zeta Tau Alpha (PHA)">Zeta Tau Alpha (PHA)</option>
+    <option value="alpha Kappa Delta Phi Sorority, Inc. (MGC)">alpha Kappa Delta Phi Sorority, Inc. (MGC)</option>
+    <option value="N/A">N/A</option>
+  </select>
+  <label for="loc-affiliations">Chapters</label>
+  <div class="help-block with-errors"></div>
+</div>
+`
+var faternity = `
+<div class="chapter-content">
+  <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+    <option value="" disabled selected hidden></option>
+    <option value="Alpha Delta Phi (IFC)">Alpha Delta Phi (IFC)</option>
+    <option value="Alpha Epsilon Pi (IFC)">Alpha Epsilon Pi (IFC)</option>
+    <option value="Alpha Phi Alpha Fraternity, Inc. (NPHC)">Alpha Phi Alpha Fraternity, Inc. (NPHC)</option>
+    <option value="Alpha Sigma Phi (IFC)">Alpha Sigma Phi (IFC)</option>
+    <option value="Alpha Tau Omega (IFC)">Alpha Tau Omega (IFC)</option>
+    <option value="Beta Theta Pi (IFC)">Beta Theta Pi (IFC)</option>
+    <option value="Chi Phi (IFC)">Chi Phi (IFC)</option>
+    <option value="Delta Sigma Phi (IFC)">Delta Sigma Phi (IFC)</option>
+    <option value="Delta Upsilon (IFC)">Delta Upsilon (IFC)</option>
+    <option value="Iota Nu Delta Fraternity, Inc. (MGC)">Iota Nu Delta Fraternity, Inc. (MGC)</option>
+    <option value="Kappa Alpha Order (IFC)">Kappa Alpha Order (IFC)</option>
+    <option value="Kappa Alpha Psi Fraternity, Inc. (NPHC)">Kappa Alpha Psi Fraternity, Inc. (NPHC)</option>
+    <option value="Lambda Chi Alpha (IFC)">Lambda Chi Alpha (IFC)</option>
+    <option value="Lambda Upsilon Lambda Fraternity, Inc. (MGC)">Lambda Upsilon Lambda Fraternity, Inc. (MGC)</option>
+    <option value="Phi Delta Sigma Fraternity, Inc. (MGC)">Phi Delta Sigma Fraternity, Inc. (MGC)</option>
+    <option value="Phi Delta Theta (IFC)">Phi Delta Theta (IFC)</option>
+    <option value="Phi Kappa Psi (IFC)">Phi Kappa Psi (IFC)</option>
+    <option value="Phi Kappa Tau (IFC)">Phi Kappa Tau (IFC)</option>
+    <option value="Phi Sigma Kappa (IFC)">Phi Sigma Kappa (IFC)</option>
+    <option value="Pi Kappa Alpha (IFC)">Pi Kappa Alpha (IFC)</option>
+    <option value="Sigma Alpha Epsilon (IFC)">Sigma Alpha Epsilon (IFC)</option>
+    <option value="Sigma Alpha Mu (IFC)">Sigma Alpha Mu (IFC)</option>
+    <option value="Sigma Chi (IFC)">Sigma Chi (IFC)</option>
+    <option value="Sigma Nu (IFC)">Sigma Nu (IFC)</option>
+    <option value="Sigma Phi Epsilon (IFC)">Sigma Phi Epsilon (IFC)</option>
+    <option value="Tau Epsilon Phi (IFC)">Tau Epsilon Phi (IFC)</option>
+    <option value="Theta Chi (IFC)">Theta Chi (IFC)</option>
+    <option value="Zeta Beta Tau (IFC)">Zeta Beta Tau (IFC)</option>
+    <option value="Zeta Psi (IFC)">Zeta Psi (IFC)</option>
+    <option value="N/A">N/A</option>
+  </select>
+  <label for="loc-affiliations">Chapters</label>
+  <div class="help-block with-errors"></div>
+</div>
+`
+var sorority = `
+<div class="chapter-content">
+  <select id="loc-affiliations" required data-table="Local Affiliations" data-error="Please fill out this field." name="local-affiliations" type="text" class="multisteps-form__input form-control" placeholder="Local affiliations - faternity, sorority, etc.">
+    <option value="" disabled selected hidden></option>
+    <option value="Alpha Chi Omega (PHA)">Alpha Chi Omega (PHA)</option>
+    <option value="Alpha Delta Pi (PHA)">Alpha Delta Pi (PHA)</option>
+    <option value="Alpha Epsilon Phi (PHA)">Alpha Epsilon Phi (PHA)</option>
+    <option value="Alpha Kappa Alpha Sorority, Inc. (NPHC)">Alpha Kappa Alpha Sorority, Inc. (NPHC)</option>
+    <option value="Alpha Omicron Pi (PHA)">Alpha Omicron Pi (PHA)</option>
+    <option value="Alpha Phi (PHA)">Alpha Phi (PHA)</option>
+    <option value="Alpha Xi Delta (PHA)">Alpha Xi Delta (PHA)</option>
+    <option value="Delta Delta Delta (PHA)">Delta Delta Delta (PHA)</option>
+    <option value="Delta Gamma (PHA)">Delta Gamma (PHA)</option>
+    <option value="Delta Phi Epsilon (PHA)">Delta Phi Epsilon (PHA)</option>
+    <option value="Delta Sigma Theta Sorority, Inc. (NPHC)">Delta Sigma Theta Sorority, Inc. (NPHC)</option>
+    <option value="Gamma Phi Beta (PHA)">Gamma Phi Beta (PHA)</option>
+    <option value="Hermandad de Sigma Iota Alpha, Inc. (MGC)">Hermandad de Sigma Iota Alpha, Inc. (MGC)</option>
+    <option value="Kappa Alpha Theta (PHA)">Kappa Alpha Theta (PHA)</option>
+    <option value="Kappa Delta (PHA)">Kappa Delta (PHA)</option>
+    <option value="Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)">Kappa Lambda Xi Multicultural Sorority, Inc. (MGC)</option>
+    <option value="Kappa Phi Lambda Sorority, Inc. (MGC)">Kappa Phi Lambda Sorority, Inc. (MGC)</option>
+    <option value="Lambda Theta Alpha Latin Sorority, Inc. (MGC)">Lambda Theta Alpha Latin Sorority, Inc. (MGC)</option>
+    <option value="Phi Sigma Sigma (PHA)">Phi Sigma Sigma (PHA)</option>
+    <option value="Sigma Delta Tau (PHA)">Sigma Delta Tau (PHA)</option>
+    <option value="Sigma Kappa (PHA)">Sigma Kappa (PHA)</option>
+    <option value="Sigma Psi Zeta Sorority, Inc. (MGC)">Sigma Psi Zeta Sorority, Inc. (MGC)</option>
+    <option value="Zeta Tau Alpha (PHA)">Zeta Tau Alpha (PHA)</option>
+    <option value="alpha Kappa Delta Phi Sorority, Inc. (MGC)">alpha Kappa Delta Phi Sorority, Inc. (MGC)</option>
+    <option value="N/A">N/A</option>
+  </select>
+  <label for="loc-affiliations">Chapters</label>
+  <div class="help-block with-errors"></div>
+</div>
+`
+
+$("#gender").change(function(){
+  if($('#gender').val()=="Male"){
+      console.log("Faternity")
+      $(".chapter-content").detach();
+      $(".chapter-div").append(faternity);
+      $("form").validator('update');
+
+
+
+  }
+  else if ($('#gender').val()=="Female") {
+    console.log("sorority");
+    $(".chapter-content").detach();
+    $(".chapter-div").append(sorority);
+    $("form").validator('update');
+
+  }
+  else {
+    console.log("All");
+    $(".chapter-content").detach();
+    $(".chapter-div").append(chapters);
+    $("form").validator('update');
+
+  }
+
+})
+
+
+
 
 function dateToFunction(fromDate, toDate) {
   var fromDateVar = $('#'+fromDate).val();

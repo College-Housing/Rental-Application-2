@@ -61,6 +61,23 @@ function IDGenerator() {
 //  }, false);
 //
 // });
+const ssn = document.getElementById('applicant-ssn');
+
+function ssnValidation() {
+  ssn.addEventListener("keydown", (e) => {
+    if(e.key === "Backspace" || e.key === "Delete") return;
+    if(e.target.value.length === 3) {
+      ssn.value = ssn.value + "-";
+    }
+    if(e.target.value.length === 6) {
+      ssn.value = ssn.value + "-";
+    }
+
+  })
+
+}
+
+
 
 $(document).ready(function(){
   var generator = new IDGenerator();
@@ -75,6 +92,16 @@ $(document).ready(function(){
     }
   });
   $("#uniqueID").val(generator.generate());
+  $(".toggle-ssn").click(function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var input = $($(this).attr("toggle"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+    } else {
+      input.attr("type", "password");
+    }
+  });
 
 
 });
