@@ -6,6 +6,7 @@ This is documentation for the rental application code.
 
 1. In your git bash run `git clone https://github.com/College-Housing/Rental-Application-2.git`
 2. Run the project on a localhost
+3. When publishing the project it must be loaded over http to use the Mailboxlayer API to validate the emails
 
 ## Technologies
 1. Bootstrap 4
