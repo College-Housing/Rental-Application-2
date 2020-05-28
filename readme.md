@@ -11,6 +11,7 @@ This is documentation for the rental application code.
 1. Bootstrap 4
 2. jQuery 3.3.1
 3. Bootstrap Validator: (https://1000hz.github.io/bootstrap-validator/)
+4. Mailboxlayer API (To validate emails)
 
 
 ## Bootstrap Validator
