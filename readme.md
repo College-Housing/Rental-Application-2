@@ -1,6 +1,6 @@
 # Rental Applicaton V(0.1)
-Date: Thursday,28th May, 2020
-By: Lina Basuni
+- Date: Thursday,28th May, 2020
+- By: Lina Basuni
 
 This is the documentation of the Rental Application.
 Online link : http://rentalapp.collegehousing.us/
