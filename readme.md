@@ -16,16 +16,18 @@ This is documentation for the rental application code.
 ## Bootstrap Validator
 1000hz bootstrap validator is used in the validation of this form.
 main functions of the validator:
-⋅⋅1. To validate the whole form use: `$('form').validator('validate');`
-⋅⋅2. If new fields are added dynamically use: `$('form').validator('update');` to add these added fields to the fields to be validated
-⋅⋅3. To remove all validation use:  `$('form').validator('update');`
-⋅⋅4. To apply any of those functions on the current active panel only use this code instead:
+..1. To validate the whole form use: `$('form').validator('validate');`
+..2. If new fields are added dynamically use: `$('form').validator('update');` to add these added fields to the fields to be validated
+..3. To remove all validation use:  `$('form').validator('update');`
+..4. To apply any of those functions on the current active panel only use this code instead:
     `
     var currentPanel =getCurrentPanel();
     currentPanel.validator('update');
     currentPanel.validator('validate');
     currentPanel.validator('reset');
     `
+
+  For more details, this is the documentation of the validator: https://1000hz.github.io/bootstrap-validator/
 
 ## Project Files
  1. index.html
